@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UTS - Video Praktik Pembelajaran PJOK | Krisna Pratama Aulihar, S.Pd. - UNY</title>
+  
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2•family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- =================================================================
+       1. TOPBAR (Contact Info & Angled Lime Social Strip)
+       ================================================================= -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-contact">
+        <a href="tel:+6281234567890" class="topbar-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>+62 812-3456-7890</span>
+        </a>
+        <a href="mailto:krisna.ppg@uny.ac.id" class="topbar-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>krisna.ppg@uny.ac.id</span>
+        </a>
+        <div class="topbar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Universitas Negeri Yogyakarta • D.I. Yogyakarta</span>
+        </div>
+      </div>
+
+      <div class="topbar-social-wrap">
+        <a href="javascript:void(0)" onclick="showToast('Facebook Krisna Pratama')" class="social-circle-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('Twitter / X')" class="social-circle-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('Instagram Krisna Pratama')" class="social-circle-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('Kanal YouTube Pembelajaran PJOK')" class="social-circle-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('LinkedIn Krisna Pratama')" class="social-circle-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       2. MAIN NAVBAR
+       ================================================================= -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="brand">
+        <img src="../logo.png" alt="Logo UNY" class="brand-logo-img" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-title">Krisna Pratama, S.Pd.</span>
+          <span class="brand-subtitle">PPG Calon Guru PJOK UNY</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Beranda</a></li>
+          <li><a href="../profil.html" class="nav-link">Profil</a></li>
+          
+          <!-- UTS Dropdown (Active) -->
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle active" role="button">
+              UTS <i class="fa-solid fa-chevron-down chevron-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="rancangan.html" class="dropdown-item"><i class="fa-solid fa-book-bookmark"></i> Rancangan</a></li>
+              <li><a href="media.html" class="dropdown-item"><i class="fa-solid fa-photo-film"></i> Media</a></li>
+              <li><a href="instrumen.html" class="dropdown-item"><i class="fa-solid fa-clipboard-check"></i> Instrumen</a></li>
+              <li><a href="video.html" class="dropdown-item active" style="font-weight:700;"><i class="fa-solid fa-circle-play"></i> Video</a></li>
+            </ul>
+          </li>
+
+          <!-- UAS Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle" role="button">
+              UAS <i class="fa-solid fa-chevron-down chevron-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="../UAS/rancangan.html" class="dropdown-item"><i class="fa-solid fa-book-bookmark"></i> Rancangan</a></li>
+              <li><a href="../UAS/media.html" class="dropdown-item"><i class="fa-solid fa-photo-film"></i> Media</a></li>
+              <li><a href="../UAS/instrumen.html" class="dropdown-item"><i class="fa-solid fa-clipboard-check"></i> Instrumen</a></li>
+              <li><a href="../UAS/video.html" class="dropdown-item"><i class="fa-solid fa-circle-play"></i> Video</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../non-mengajar.html" class="nav-link">Non-Mengajar</a></li>
+          <li><a href="../dokumentasi.html" class="nav-link">Dokumentasi</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html" class="btn btn-outline-dark btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Beranda
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =================================================================
+       3. SUBPAGE HERO HEADER
+       ================================================================= -->
+  <section class="subpage-hero-agency">
+    <div class="container">
+      <div class="badge-pill-group">
+        <span class="twin-dot-icon">
+          <span></span><span></span>
+        </span>
+        <span>UTS • SIKLUS 1 PPL TERBIMBING</span>
+      </div>
+
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--color-primary-dark); margin-bottom: 0.8rem;">
+        Video Praktik Pembelajaran Terbimbing
+      </h1>
+      <p style="max-width: 760px; font-size: 1.05rem; line-height: 1.6; color: var(--color-text-muted);">
+        Rekaman video pelaksanaan pembelajaran lapangan materi bola voli yang telah diedit sesuai pedoman Uji Kinerja (UKin) PPG Calon Guru berdurasi 15 menit dengan timestamps sintaks interaktif.
+      </p>
+
+      <div class="subpage-breadcrumb">
+        <a href="../index.html">Beranda</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Siklus 1 (UTS)</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span style="color: var(--color-primary-dark); font-weight: 700;">Video Praktik</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       4. VIDEO PLAYER SHOWCASE
+       ================================================================= -->
+  <main style="padding: 4rem 0 6rem; background: #FFFFFF;">
+    <div class="container">
+      
+      <div class="video-container-card">
+        <div class="video-grid-layout">
+          
+          <!-- Video Display Area -->
+          <div class="video-player-area">
+            <iframe width="100%" height="100%" style="min-height: 440px; border: none;" src="https://www.youtube.com/embed/dQw4w9WgXcQ•rel=0" title="Video Praktik PPL Terbimbing Siklus 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <!-- Video Sidebar & Timeline -->
+          <div class="video-sidebar">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.5rem;">
+              <h3 style="font-size:1.25rem; color:var(--color-primary-dark); font-weight:800;">Sintaks Pembelajaran</h3>
+              <span class="time-badge">Total Durasi 15:20</span>
+            </div>
+            <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:1.25rem;">
+              Materi: Passing Bawah Berdiferensiasi • Kelas X SMA Laboratorium UNY
+            </p>
+
+            <div class="timeline-list">
+              <div class="timeline-item active">
+                <span class="time-badge">00:00 - 02:45</span>
+                <div>
+                  <strong style="font-size:0.88rem; color:var(--color-primary-dark); display:block; margin-bottom:2px;">1. Pendahuluan & Apersepsi</strong>
+                  <span style="font-size:0.8rem; color:var(--color-text-muted);">Salam, presensi, penyampaian tujuan pembelajaran, dan motivasi gerak.</span>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="time-badge">02:46 - 06:10</span>
+                <div>
+                  <strong style="font-size:0.88rem; color:var(--color-primary-dark); display:block; margin-bottom:2px;">2. Pemanasan Game Interaktif</strong>
+                  <span style="font-size:0.8rem; color:var(--color-text-muted);">Permainan rekreasi melatih kelincahan kaki dan respon arah gerak.</span>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="time-badge">06:11 - 12:30</span>
+                <div>
+                  <strong style="font-size:0.88rem; color:var(--color-primary-dark); display:block; margin-bottom:2px;">3. Kegiatan Inti Berdiferensiasi</strong>
+                  <span style="font-size:0.8rem; color:var(--color-text-muted);">Latihan teknik bertahap (bola spon busa ramah pemula vs bola standar).</span>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="time-badge">12:31 - 15:20</span>
+                <div>
+                  <strong style="font-size:0.88rem; color:var(--color-primary-dark); display:block; margin-bottom:2px;">4. Pendinginan & Refleksi</strong>
+                  <span style="font-size:0.8rem; color:var(--color-text-muted);">Cooling down, umpan balik kinerja passing, asesmen formatif, dan doa penutup.</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:auto; padding-top:1.5rem;">
+              <button class="btn btn-primary-dark btn-sm" style="width: 100%;" onclick="showToast('Tautan YouTube Pembelajaran Disalin!')">
+                <i class="fa-brands fa-youtube"></i> Tonton di Kanal YouTube
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =================================================================
+       5. AGENCY FOOTER
+       ================================================================= -->
+    <footer class="footer-agency">
+    <div class="container">
+      <div class="footer-agency-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-agency-col">
+          <div class="footer-agency-brand" style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem;">
+            <img src="../logo.png" alt="Logo UNY" class="footer-agency-logo-img" style="width: 46px; height: 46px; object-fit: contain; background: transparent; padding: 0; border: none; box-shadow: none; flex-shrink: 0;" onerror="this.style.display='none'">
+            <div class="footer-agency-brand-text">
+              <span class="title" style="display: block; font-size: 1.15rem; font-weight: 800; color: #ffffff;">Krisna Pratama, S.Pd.</span>
+              <span class="sub" style="display: block; font-size: 0.8rem; color: #94A3B8; font-weight: 600;">PPG Calon Guru PJOK UNY</span>
+            </div>
+          </div>
+          <p class="footer-agency-bio" style="color: #94A3B8; font-size: 0.88rem; line-height: 1.7;">
+            Portofolio resmi PPL Terbimbing Program Pendidikan Profesi Guru (PPG) Calon Guru Bidang Studi Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) Universitas Negeri Yogyakarta di SMA Laboratorium UNY.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-agency-col">
+          <h4 class="footer-agency-col-title">Navigasi Portofolio</h4>
+          <ul class="footer-agency-links">
+            <li><a href="../index.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Beranda Utama</a></li>
+            <li><a href="../profil.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Profil Lengkap Mahasiswa</a></li>
+            <li><a href="rancangan.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Siklus 1 (UTS PPL)</a></li>
+            <li><a href="../UAS/rancangan.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Siklus 2 (UAS PPL)</a></li>
+            <li><a href="../non-mengajar.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Kegiatan Non-Mengajar</a></li>
+            <li><a href="../dokumentasi.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Galeri Dokumentasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Perangkat PPL -->
+        <div class="footer-agency-col">
+          <h4 class="footer-agency-col-title">Perangkat Pembelajaran</h4>
+          <ul class="footer-agency-links">
+            <li><a href="rancangan.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Modul Ajar Siklus 1 & 2</a></li>
+            <li><a href="media.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Media Berbasis TPACK</a></li>
+            <li><a href="instrumen.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Instrumen Asesmen PJOK</a></li>
+            <li><a href="video.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Video Praktik Pembelajaran</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak & Alamat -->
+        <div class="footer-agency-col">
+          <h4 class="footer-agency-col-title">LPTK & Kontak Resmi</h4>
+          <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 0.75rem;">
+            <i class="fa-solid fa-location-dot" style="color: var(--color-accent-lime); margin-right: 6px;"></i> Kampus FIKK, Universitas Negeri Yogyakarta, Jl. Colombo No. 1, Sleman, D.I. Yogyakarta
+          </p>
+          <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 1.25rem;">
+            <i class="fa-solid fa-envelope" style="color: var(--color-accent-lime); margin-right: 6px;"></i> krisna.ppg@uny.ac.id
+          </p>
+          <div style="display: flex; gap: 0.6rem;">
+            <a href="javascript:void(0)" onclick="showToast('YouTube')" class="social-circle-btn"><i class="fa-brands fa-youtube"></i></a>
+            <a href="javascript:void(0)" onclick="showToast('Instagram')" class="social-circle-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="javascript:void(0)" onclick="showToast('LinkedIn')" class="social-circle-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-strip">
+        <div>
+          &copy; 2026 <strong>Krisna Pratama Aulihar, S.Pd.</strong> All Rights Reserved • PPG Calon Guru PJOK Universitas Negeri Yogyakarta.
+        </div>
+        <div>
+          Tema Desain: Modern Clean Green & Lime Agency Style
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
+

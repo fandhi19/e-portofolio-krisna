@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UTS - Instrumen Penilaian PJOK | Krisna Pratama Aulihar, S.Pd. - UNY</title>
+  
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2•family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- =================================================================
+       1. TOPBAR (Contact Info & Angled Lime Social Strip)
+       ================================================================= -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-contact">
+        <a href="tel:+6281234567890" class="topbar-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>+62 812-3456-7890</span>
+        </a>
+        <a href="mailto:krisna.ppg@uny.ac.id" class="topbar-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>krisna.ppg@uny.ac.id</span>
+        </a>
+        <div class="topbar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Universitas Negeri Yogyakarta • D.I. Yogyakarta</span>
+        </div>
+      </div>
+
+      <div class="topbar-social-wrap">
+        <a href="javascript:void(0)" onclick="showToast('Facebook Krisna Pratama')" class="social-circle-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('Twitter / X')" class="social-circle-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('Instagram Krisna Pratama')" class="social-circle-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('Kanal YouTube Pembelajaran PJOK')" class="social-circle-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('LinkedIn Krisna Pratama')" class="social-circle-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       2. MAIN NAVBAR
+       ================================================================= -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="brand">
+        <img src="../logo.png" alt="Logo UNY" class="brand-logo-img" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-title">Krisna Pratama, S.Pd.</span>
+          <span class="brand-subtitle">PPG Calon Guru PJOK UNY</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Beranda</a></li>
+          <li><a href="../profil.html" class="nav-link">Profil</a></li>
+          
+          <!-- UTS Dropdown (Active) -->
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle active" role="button">
+              UTS <i class="fa-solid fa-chevron-down chevron-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="rancangan.html" class="dropdown-item"><i class="fa-solid fa-book-bookmark"></i> Rancangan</a></li>
+              <li><a href="media.html" class="dropdown-item"><i class="fa-solid fa-photo-film"></i> Media</a></li>
+              <li><a href="instrumen.html" class="dropdown-item active" style="font-weight:700;"><i class="fa-solid fa-clipboard-check"></i> Instrumen</a></li>
+              <li><a href="video.html" class="dropdown-item"><i class="fa-solid fa-circle-play"></i> Video</a></li>
+            </ul>
+          </li>
+
+          <!-- UAS Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle" role="button">
+              UAS <i class="fa-solid fa-chevron-down chevron-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="../UAS/rancangan.html" class="dropdown-item"><i class="fa-solid fa-book-bookmark"></i> Rancangan</a></li>
+              <li><a href="../UAS/media.html" class="dropdown-item"><i class="fa-solid fa-photo-film"></i> Media</a></li>
+              <li><a href="../UAS/instrumen.html" class="dropdown-item"><i class="fa-solid fa-clipboard-check"></i> Instrumen</a></li>
+              <li><a href="../UAS/video.html" class="dropdown-item"><i class="fa-solid fa-circle-play"></i> Video</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../non-mengajar.html" class="nav-link">Non-Mengajar</a></li>
+          <li><a href="../dokumentasi.html" class="nav-link">Dokumentasi</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html" class="btn btn-outline-dark btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Beranda
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =================================================================
+       3. SUBPAGE HERO HEADER
+       ================================================================= -->
+  <section class="subpage-hero-agency">
+    <div class="container">
+      <div class="badge-pill-group">
+        <span class="twin-dot-icon">
+          <span></span><span></span>
+        </span>
+        <span>UTS • SIKLUS 1 PPL TERBIMBING</span>
+      </div>
+
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--color-primary-dark); margin-bottom: 0.8rem;">
+        Instrumen & Rubrik Penilaian
+      </h1>
+      <p style="max-width: 760px; font-size: 1.05rem; line-height: 1.6; color: var(--color-text-muted);">
+        Perangkat asesmen otentik 3 ranah kompetensi (psikomotor, kognitif, dan afektif) yang dirancang untuk mengukur capaian belajar gerak peserta didik secara terukur, valid, dan berkeadilan.
+      </p>
+
+      <div class="subpage-breadcrumb">
+        <a href="../index.html">Beranda</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Siklus 1 (UTS)</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span style="color: var(--color-primary-dark); font-weight: 700;">Instrumen Penilaian</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       4. RUBRIC BOXES GRID
+       ================================================================= -->
+  <main style="padding: 4rem 0 6rem; background: #FFFFFF;">
+    <div class="container">
+      
+      <div class="rubric-grid">
+        
+        <!-- Box 1: Psikomotor -->
+        <div class="rubric-box">
+          <span class="rubric-badge motorik">Ranah Keterampilan Gerak</span>
+          <h3 style="font-size: 1.25rem; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+            Rubrik Kinerja Passing Bola Voli
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6;">
+            Mengobservasi tiga fase gerak: sikap awalan (posisi lutut & pandangan), perkenaan (lengan rapat lurus), dan akhiran (ayunan & pemindahan berat badan).
+          </p>
+          <ul class="rubric-list">
+            <li><span class="check-icon">âœ“</span> Sikap lutut ditekuk 45Â° dan tumpuan badan seimbang</li>
+            <li><span class="check-icon">âœ“</span> Kedua lengan lurus rapat mengunci sendi siku</li>
+            <li><span class="check-icon">âœ“</span> Pantulan bola melambung stabil dan terarah ke sasaran</li>
+            <li><span class="check-icon">âœ“</span> Sikap lanjutan melangkah maju mengikuti arah datangnya bola</li>
+          </ul>
+          <button class="btn btn-primary-dark btn-sm" style="width: 100%;" onclick="showToast('Mengunduh Rubrik Kinerja (.PDF)...')">
+            <i class="fa-solid fa-download"></i> Unduh Rubrik Kinerja
+          </button>
+        </div>
+
+        <!-- Box 2: Kognitif -->
+        <div class="rubric-box">
+          <span class="rubric-badge kognitif">Ranah Pengetahuan Siswa</span>
+          <h3 style="font-size: 1.25rem; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+            Asesmen Pemahaman Taktik & Aturan
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6;">
+            Menilai pemahaman analisis siswa terkait antisipasi servis lawan, penempatan umpan ke setter, pemahaman rotasi lapangan, dan prinsip dasar fisiologi pemanasan.
+          </p>
+          <ul class="rubric-list">
+            <li><span class="check-icon">âœ“</span> Analisis sudut elevasi lengan vs tinggi net PBVSI</li>
+            <li><span class="check-icon">âœ“</span> Regulasi pelanggaran sentuhan ganda (double hit) & jaring</li>
+            <li><span class="check-icon">âœ“</span> Perhitungan denyut nadi pemanasan ideal peserta didik</li>
+            <li><span class="check-icon">âœ“</span> Bank kuis pilihan ganda terstruktur 15 butir soal</li>
+          </ul>
+          <button class="btn btn-outline-dark btn-sm" style="width: 100%;" onclick="showToast('Bank Soal Kognitif Dibuka!')">
+            <i class="fa-solid fa-file-lines"></i> Bank Soal Kognitif
+          </button>
+        </div>
+
+        <!-- Box 3: Afektif -->
+        <div class="rubric-box">
+          <span class="rubric-badge afektif">Ranah Sikap & Karakter</span>
+          <h3 style="font-size: 1.25rem; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+            Lembar Observasi Karakter Pancasila
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6;">
+            Pemantauan sistematis terhadap dimensi Mandiri, Gotong Royong, dan Sportivitas selama aktivitas drill teknik dan pertandingan mini bola voli di lapangan.
+          </p>
+          <ul class="rubric-list">
+            <li><span class="check-icon">âœ“</span> Sportivitas: Mengakui bola keluar dan menghormati keputusan wasit</li>
+            <li><span class="check-icon">âœ“</span> Gotong Royong: Mendukung rekan seregu yang masih kesulitan berlatih</li>
+            <li><span class="check-icon">âœ“</span> Tanggung jawab menjaga dan merapikan alat sarpras bola voli</li>
+            <li><span class="check-icon">âœ“</span> Percaya diri saat mendemonstrasikan variasi passing berpasangan</li>
+          </ul>
+          <button class="btn btn-outline-dark btn-sm" style="width: 100%;" onclick="showToast('Format Observasi Sikap Siap!')">
+            <i class="fa-solid fa-user-check"></i> Lembar Observasi Sikap
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =================================================================
+       5. AGENCY FOOTER
+       ================================================================= -->
+    <footer class="footer-agency">
+    <div class="container">
+      <div class="footer-agency-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-agency-col">
+          <div class="footer-agency-brand" style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem;">
+            <img src="../logo.png" alt="Logo UNY" class="footer-agency-logo-img" style="width: 46px; height: 46px; object-fit: contain; background: transparent; padding: 0; border: none; box-shadow: none; flex-shrink: 0;" onerror="this.style.display='none'">
+            <div class="footer-agency-brand-text">
+              <span class="title" style="display: block; font-size: 1.15rem; font-weight: 800; color: #ffffff;">Krisna Pratama, S.Pd.</span>
+              <span class="sub" style="display: block; font-size: 0.8rem; color: #94A3B8; font-weight: 600;">PPG Calon Guru PJOK UNY</span>
+            </div>
+          </div>
+          <p class="footer-agency-bio" style="color: #94A3B8; font-size: 0.88rem; line-height: 1.7;">
+            Portofolio resmi PPL Terbimbing Program Pendidikan Profesi Guru (PPG) Calon Guru Bidang Studi Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) Universitas Negeri Yogyakarta di SMA Laboratorium UNY.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-agency-col">
+          <h4 class="footer-agency-col-title">Navigasi Portofolio</h4>
+          <ul class="footer-agency-links">
+            <li><a href="../index.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Beranda Utama</a></li>
+            <li><a href="../profil.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Profil Lengkap Mahasiswa</a></li>
+            <li><a href="rancangan.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Siklus 1 (UTS PPL)</a></li>
+            <li><a href="../UAS/rancangan.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Siklus 2 (UAS PPL)</a></li>
+            <li><a href="../non-mengajar.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Kegiatan Non-Mengajar</a></li>
+            <li><a href="../dokumentasi.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Galeri Dokumentasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Perangkat PPL -->
+        <div class="footer-agency-col">
+          <h4 class="footer-agency-col-title">Perangkat Pembelajaran</h4>
+          <ul class="footer-agency-links">
+            <li><a href="rancangan.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Modul Ajar Siklus 1 & 2</a></li>
+            <li><a href="media.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Media Berbasis TPACK</a></li>
+            <li><a href="instrumen.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Instrumen Asesmen PJOK</a></li>
+            <li><a href="video.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Video Praktik Pembelajaran</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak & Alamat -->
+        <div class="footer-agency-col">
+          <h4 class="footer-agency-col-title">LPTK & Kontak Resmi</h4>
+          <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 0.75rem;">
+            <i class="fa-solid fa-location-dot" style="color: var(--color-accent-lime); margin-right: 6px;"></i> Kampus FIKK, Universitas Negeri Yogyakarta, Jl. Colombo No. 1, Sleman, D.I. Yogyakarta
+          </p>
+          <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 1.25rem;">
+            <i class="fa-solid fa-envelope" style="color: var(--color-accent-lime); margin-right: 6px;"></i> krisna.ppg@uny.ac.id
+          </p>
+          <div style="display: flex; gap: 0.6rem;">
+            <a href="javascript:void(0)" onclick="showToast('YouTube')" class="social-circle-btn"><i class="fa-brands fa-youtube"></i></a>
+            <a href="javascript:void(0)" onclick="showToast('Instagram')" class="social-circle-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="javascript:void(0)" onclick="showToast('LinkedIn')" class="social-circle-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-strip">
+        <div>
+          &copy; 2026 <strong>Krisna Pratama Aulihar, S.Pd.</strong> All Rights Reserved • PPG Calon Guru PJOK Universitas Negeri Yogyakarta.
+        </div>
+        <div>
+          Tema Desain: Modern Clean Green & Lime Agency Style
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
+

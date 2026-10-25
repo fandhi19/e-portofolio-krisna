@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UTS - Rancangan Pembelajaran PJOK | Krisna Pratama Aulihar, S.Pd. - UNY</title>
+  
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- =================================================================
+       1. TOPBAR (Contact Info & Angled Lime Social Strip)
+       ================================================================= -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-contact">
+        <a href="tel:+6281234567890" class="topbar-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>+62 812-3456-7890</span>
+        </a>
+        <a href="mailto:krisna.ppg@uny.ac.id" class="topbar-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>krisna.ppg@uny.ac.id</span>
+        </a>
+        <div class="topbar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Universitas Negeri Yogyakarta • D.I. Yogyakarta</span>
+        </div>
+      </div>
+
+      <div class="topbar-social-wrap">
+        <a href="javascript:void(0)" onclick="showToast('Facebook Krisna Pratama')" class="social-circle-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('Twitter / X')" class="social-circle-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('Instagram Krisna Pratama')" class="social-circle-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('Kanal YouTube Pembelajaran PJOK')" class="social-circle-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="javascript:void(0)" onclick="showToast('LinkedIn Krisna Pratama')" class="social-circle-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       2. MAIN NAVBAR
+       ================================================================= -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="brand">
+        <img src="../logo.png" alt="Logo UNY" class="brand-logo-img" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-title">Krisna Pratama, S.Pd.</span>
+          <span class="brand-subtitle">PPG Calon Guru PJOK UNY</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Beranda</a></li>
+          <li><a href="../profil.html" class="nav-link">Profil</a></li>
+          
+          <!-- UTS Dropdown (Active) -->
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle active" role="button">
+              UTS <i class="fa-solid fa-chevron-down chevron-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="rancangan.html" class="dropdown-item active" style="font-weight:700;"><i class="fa-solid fa-book-bookmark"></i> Rancangan</a></li>
+              <li><a href="media.html" class="dropdown-item"><i class="fa-solid fa-photo-film"></i> Media</a></li>
+              <li><a href="instrumen.html" class="dropdown-item"><i class="fa-solid fa-clipboard-check"></i> Instrumen</a></li>
+              <li><a href="video.html" class="dropdown-item"><i class="fa-solid fa-circle-play"></i> Video</a></li>
+            </ul>
+          </li>
+
+          <!-- UAS Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle" role="button">
+              UAS <i class="fa-solid fa-chevron-down chevron-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="../UAS/rancangan.html" class="dropdown-item"><i class="fa-solid fa-book-bookmark"></i> Rancangan</a></li>
+              <li><a href="../UAS/media.html" class="dropdown-item"><i class="fa-solid fa-photo-film"></i> Media</a></li>
+              <li><a href="../UAS/instrumen.html" class="dropdown-item"><i class="fa-solid fa-clipboard-check"></i> Instrumen</a></li>
+              <li><a href="../UAS/video.html" class="dropdown-item"><i class="fa-solid fa-circle-play"></i> Video</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../non-mengajar.html" class="nav-link">Non-Mengajar</a></li>
+          <li><a href="../dokumentasi.html" class="nav-link">Dokumentasi</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html" class="btn btn-outline-dark btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Beranda
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =================================================================
+       3. SUBPAGE HERO HEADER
+       ================================================================= -->
+  <section class="subpage-hero-agency">
+    <div class="container">
+      <div class="badge-pill-group">
+        <span class="twin-dot-icon">
+          <span></span><span></span>
+        </span>
+        <span>UTS • SIKLUS 1 PPL TERBIMBING</span>
+      </div>
+
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--color-primary-dark); margin-bottom: 0.8rem;">
+        Rancangan Pembelajaran (Modul Ajar)
+      </h1>
+      <p style="max-width: 820px; font-size: 1.05rem; line-height: 1.6; color: var(--color-text-muted);">
+        Perangkat ajar resmi Kurikulum Merdeka Fase F (Kelas XI) untuk Ujian Tengah Semester (UTS) / Siklus 1 PPL Terbimbing di Sekolah Laboratorium / Mitra Universitas Negeri Yogyakarta. Mengusung materi aktivitas senam alat <strong>Lompat Kangkang (Vaulting)</strong> dengan pendekatan diferensiasi berjenjang dan mitigasi keselamatan aktif.
+      </p>
+
+      <div class="subpage-breadcrumb">
+        <a href="../index.html">Beranda</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Siklus 1 (UTS)</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span style="color: var(--color-primary-dark); font-weight: 700;">Rancangan Pembelajaran</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       4. MAIN CONTENT: PDF VIEWER & COMPREHENSIVE ANALYSIS
+       ================================================================= -->
+  <main style="padding: 4rem 0 6rem; background: #FFFFFF;">
+    <div class="container">
+      
+      <!-- =============================================================
+           A. INTERACTIVE PDF VIEWER SECTION
+           ============================================================= -->
+      <section style="margin-bottom: 5rem;">
+        <div class="section-agency-head" style="margin-bottom: 2rem;">
+          <div class="badge-pill-group">
+            <span class="twin-dot-icon">
+              <span></span><span></span>
+            </span>
+            <span>DOKUMEN UTAMA SIKLUS 1</span>
+          </div>
+          <h2 class="section-agency-title">Pratinjau Modul Ajar Digital (PDF)</h2>
+          <p class="section-agency-subtitle">
+            Telusuri langsung dokumen lengkap 10 halaman Modul Ajar PJOK yang telah divalidasi oleh Guru Pamong dan Dosen Pembimbing Lapangan (DPL) FIKK UNY.
+          </p>
+        </div>
+
+        <!-- PDF Viewer Container Card -->
+        <div class="pdf-viewer-card">
+          <!-- Toolbar -->
+          <div class="pdf-viewer-toolbar">
+            <div class="pdf-toolbar-info">
+              <div class="pdf-toolbar-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+              <div>
+                <div class="pdf-toolbar-title">Modul Ajar PJOK: Senam Alat (Lompat Kangkang / Vaulting)</div>
+                <div class="pdf-toolbar-sub">
+                  Penyusun: <strong>Krisna Pratama Aulihar, S.Pd.</strong> • Fase F / Kelas XI SMA • 6 JP (2 Pertemuan)
+                </div>
+              </div>
+            </div>
+
+            <div class="pdf-toolbar-actions">
+              <span class="tag-pill" style="background: rgba(184, 224, 35, 0.2); color: #B8E023; font-weight: 700; border: 1px solid rgba(184, 224, 35, 0.4); padding: 6px 14px; font-size: 0.78rem;">
+                <i class="fa-solid fa-circle-check" style="margin-right: 5px;"></i> Terverifikasi LPTK UNY
+              </span>
+              <a href="../Dokumen/Modul Siklus 1.pdf" download="Modul_Ajar_PJOK_Siklus1_KrisnaPratama.pdf" class="btn btn-primary-lime btn-sm">
+                <i class="fa-solid fa-file-arrow-down"></i> Unduh PDF (245 KB)
+              </a>
+              <a href="../Dokumen/Modul Siklus 1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Layar Penuh
+              </a>
+            </div>
+          </div>
+
+          <!-- Embedded Frame -->
+          <div class="pdf-frame-wrapper">
+            <iframe 
+              src="../Dokumen/Modul Siklus 1.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+              title="Modul Ajar Siklus 1 Krisna Pratama Aulihar"
+              loading="lazy">
+              <p style="padding: 2rem; color: #FFFFFF; text-align: center;">
+                Peramban Anda tidak mendukung tampilan PDF langsung. Silakan 
+                <a href="../Dokumen/Modul Siklus 1.pdf" target="_blank" style="color: var(--color-accent-lime); font-weight: bold; text-decoration: underline;">
+                  Klik di sini untuk mengunduh atau membuka Modul Ajar Siklus 1 (.PDF)
+                </a>.
+              </p>
+            </iframe>
+          </div>
+
+          <!-- Footer Metadata Bar -->
+          <div style="background: #F8F9F5; padding: 1.25rem 2rem; border-top: 1px solid var(--color-border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1.8rem; flex-wrap: wrap;">
+              <div style="font-size: 0.85rem; color: var(--color-text-muted);">
+                <i class="fa-solid fa-graduation-cap" style="color: var(--color-primary-dark); margin-right: 6px;"></i>
+                <strong>Sekolah:</strong> SMA Laboratorium / SMA Mitra UNY
+              </div>
+              <div style="font-size: 0.85rem; color: var(--color-text-muted);">
+                <i class="fa-solid fa-layer-group" style="color: var(--color-primary-dark); margin-right: 6px;"></i>
+                <strong>Diferensiasi:</strong> 4 Level Peti (2, 3, 4, & 5 Peti)
+              </div>
+              <div style="font-size: 0.85rem; color: var(--color-text-muted);">
+                <i class="fa-solid fa-shield-heart" style="color: var(--color-primary-dark); margin-right: 6px;"></i>
+                <strong>Keselamatan:</strong> Spotting Aktif & Matras Pendaratan
+              </div>
+            </div>
+            <div>
+              <a href="javascript:void(0)" onclick="showToast('Modul Ajar Resmi PPG UNY 2026')" style="font-size: 0.82rem; color: var(--color-primary-dark); font-weight: 700; text-decoration: none;">
+                <i class="fa-solid fa-circle-info" style="color: var(--color-accent-lime); margin-right: 5px;"></i> Kurikulum Merdeka 2026
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           B. COMPREHENSIVE ANALYSIS OF THE TEACHING MODULE
+           ============================================================= -->
+      <section>
+        <div class="section-agency-head" style="margin-bottom: 3.5rem;">
+          <div class="badge-pill-group">
+            <span class="twin-dot-icon">
+              <span></span><span></span>
+            </span>
+            <span>ANALISIS KOMPREHENSIF PERANGKAT AJAR</span>
+          </div>
+          <h2 class="section-agency-title">Analisis Akademik & Refleksi Kritis Modul Ajar</h2>
+          <p class="section-agency-subtitle">
+            Kajian reflektif dan tinjauan pedagogik terhadap perancangan Modul Ajar Siklus 1, mencakup keselarasan konteks lapangan, evaluasi kelebihan-kelemahan, serta justifikasi teoritis ilmu keolahragaan dan pembelajaran motorik.
+          </p>
+        </div>
+
+        <!-- =========================================================
+             1. KONTEKS DAN TUJUAN
+             ========================================================= -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">01</div>
+            <div>
+              <h3 class="analysis-module-title">Konteks dan Tujuan Pembelajaran</h3>
+              <p class="analysis-module-desc">
+                Tinjauan karakteristik peserta didik SMA fase remaja, daya dukung fasilitas sekolah mitra, serta dekonstruksi Capaian Pembelajaran (CP) ke Alur Tujuan Pembelajaran (ATP).
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            
+            <!-- Konteks Lapangan & Siswa -->
+            <div style="margin-bottom: 2.5rem;">
+              <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.65rem;">
+                <i class="fa-solid fa-school" style="color: var(--color-primary-dark); font-size: 1.1rem;"></i>
+                A. Analisis Konteks Lingkungan Pembelajaran & Karakteristik Peserta Didik
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; margin-bottom: 1.2rem;">
+                Pembelajaran PJOK materi aktivitas senam alat (Lompat Kangkang / <em>Vaulting</em>) dirancang untuk peserta didik <strong>Fase F (Kelas XI SMA)</strong> pada rentang usia 16–17 tahun. Karakteristik penting yang melatarbelakangi rancangan modul ajar ini antara lain:
+              </p>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid var(--color-primary-dark);">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-users-viewfinder" style="margin-right: 6px;"></i> Heterogenitas Fisik & Koordinasi Motorik
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Siswa memiliki disparitas tinggi badan, berat badan (IMT), dan daya ledak tungkai (<em>explosive leg power</em>) yang signifikan. Terdapat siswa yang sudah terlatih pada cabor bola besar, namun masih kaku dalam keterampilan koordinasi senam alat.
+                  </p>
+                </div>
+
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid #F59E0B;">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-triangle-exclamation" style="margin-right: 6px; color: #F59E0B;"></i> Hambatan Psikologis (Fear of Vaulting)
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Banyak peserta didik—terutama siswi putri—mengalami kecemasan tinggi terhadap risiko cedera, rasa takut tersangkut atau menabrak peti kayu keras saat melompat. Kondisi ini memerlukan pendekatan psikologis bertahap dan pengondisian rasa aman.
+                  </p>
+                </div>
+
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid var(--color-accent-lime);">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-toolbox" style="margin-right: 6px;"></i> Daya Dukung Sarana & Keamanan Fasilitas
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Sekolah menyediakan 2 set peti lompat kayu bersusun fleksibel (dapat diatur 2 hingga 5 balok), papan pantul pegas (<em>springboard/reuther board</em>), serta matras pendaratan berbusa tebal (15 cm) yang memenuhi standar proteksi keolahragaan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dekonstruksi Tujuan Pembelajaran -->
+            <div>
+              <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.65rem;">
+                <i class="fa-solid fa-bullseye" style="color: var(--color-primary-dark); font-size: 1.1rem;"></i>
+                B. Rumusan Tujuan Pembelajaran Berbasis 4 Elemen Capaian Pembelajaran (CP)
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1.4rem;">
+                Tujuan pembelajaran dirumuskan secara holistik mencakup aspek psikomotorik, kognitif tingkat tinggi, afektif keselamatan, serta internalisasi karakter Profil Pelajar Pancasila:
+              </p>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem;">
+                
+                <!-- TP 1: Keterampilan Gerak -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: var(--color-primary-dark); color: var(--color-accent-lime); font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    TP.1 • KETERAMPILAN GERAK
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Penguasaan Rangkaian Gerak Utuh
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Peserta didik mampu mempraktikkan keterampilan lompat kangkang secara terkoordinasi dan mulus: awalan lari 10–15 meter terkontrol, tolakan kuat dua kaki serentak di papan tolak, tumpuan tangan kokoh disertai bukaan kedua tungkai lebar ke samping di atas peti, serta pendaratan stabil dengan kedua lutut mengeper (fleksi 45°).
+                  </p>
+                </div>
+
+                <!-- TP 2: Pengetahuan Gerak -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: var(--color-primary-dark); color: var(--color-accent-lime); font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    TP.2 • PENGETAHUAN GERAK
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Analisis Prinsip Biomekanika
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Peserta didik mampu menjelaskan dan menganalisis tahapan biomekanika gerak: konversi kecepatan lari horizontal menjadi daya dorong vertikal, sudut kontak tolakan, pentingnya momentum dorongan tangan (<em>push-off impulse</em>), serta fungsi redaman sendi lutut saat mendarat untuk meminimalisir gaya tekan ke tulang belakang.
+                  </p>
+                </div>
+
+                <!-- TP 3: Pemanfaatan Gerak & Safety -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: var(--color-primary-dark); color: var(--color-accent-lime); font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    TP.3 • PEMANFAATAN GERAK
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Protokol Keselamatan & Spotting
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Peserta didik mampu menerapkan prinsip <em>safety first</em>, mematuhi tata tertib antrean lorong lari, menjaga jarak aman di zona pendaratan matras, serta menguasai teknik bantuan keselamatan (<em>peer spotting</em>) untuk menopang lengan atas rekan saat fase melayang di atas peti.
+                  </p>
+                </div>
+
+                <!-- TP 4: Karakter Profil Pelajar Pancasila -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: var(--color-primary-dark); color: var(--color-accent-lime); font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    TP.4 • PENGEMBANGAN KARAKTER
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Mandiri, Kritis & Gotong Royong
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Peserta didik menunjukkan sikap <strong>Mandiri</strong> dalam memilih level tantangan ketinggian peti sesuai kapasitasnya, <strong>Gotong Royong</strong> melalui empati dan kesiapsiagaan menjaga keamanan sesama rekan, serta <strong>Bernalar Kritis</strong> dalam mengevaluasi kesalahan teknik rekan secara konstruktif.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- =========================================================
+             2. KELEBIHAN DAN KEKURANGAN
+             ========================================================= -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">02</div>
+            <div>
+              <h3 class="analysis-module-title">Kelebihan dan Kekurangan Modul Ajar</h3>
+              <p class="analysis-module-desc">
+                Evaluasi kritis terhadap efektivitas penerapan modul ajar di lapangan serta rekomendasi mitigasi solusi praktis untuk meningkatkan kualitas pembelajaran PJOK.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            
+            <!-- 2-Column Grid: Pro vs Con -->
+            <div class="analysis-grid-2col">
+              
+              <!-- Kolom Kelebihan -->
+              <div class="analysis-box-item pro">
+                <div class="analysis-box-title" style="color: var(--color-primary-dark);">
+                  <i class="fa-solid fa-circle-check" style="color: #65A30D; font-size: 1.3rem;"></i>
+                  Kelebihan & Kekuatan Modul Ajar (Strengths)
+                </div>
+                <ul class="analysis-list">
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Diferensiasi Pembelajaran Berjenjang (Leveling System):</strong>
+                      Penggunaan 4 level ketinggian peti (Level 1: 2 peti, Level 2: 3 peti, Level 3: 4 peti, dan Level 4: 5 peti) memberi ruang tumbuh yang inklusif. Siswa tidak dipaksa melompati level yang di luar batas psikologisnya, sehingga memicu rasa percaya diri bertahap.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Metode Pembelajaran Runtun (Part-and-Whole Practice):</strong>
+                      Modul memecah gerakan kompleks ke dalam latihan parsial terstruktur (drill lari menolak di papan pegas, drill lompat rintangan hurdle, drill tumpuan tangan di peti tanpa melompat). Siswa membangun memori kinestetik yang kokoh sebelum menggabungkannya ke gerak utuh.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Rubrik Asesmen Analitik 4 Skala yang Operasional:</strong>
+                      Tersedianya rubrik penilaian keterampilan praktik yang rinci pada 4 tahapan teknis (Awalan, Tolakan, Sikap di atas Peti, Pendaratan) dengan deskriptor capaian yang objektif, memudahkan guru memberikan umpan balik korektif (<em>formative feedback</em>).
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Integrasi Budaya Keselamatan Aktif (Spotting Culture):</strong>
+                      Menempatkan keselamatan bukan hanya sebagai instruksi pasif, melainkan tanggung jawab bersama antar siswa (<em>peer spotting</em>), membangun kohesivitas tim dan empati sosial di lapangan olahraga.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Kolom Kekurangan / Tantangan -->
+              <div class="analysis-box-item con">
+                <div class="analysis-box-title" style="color: #B45309;">
+                  <i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B; font-size: 1.3rem;"></i>
+                  Kelemahan & Tantangan Implementasi (Limitations)
+                </div>
+                <ul class="analysis-list">
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Tingginya Waktu Tunggu Giliran Siswa (High Waiting Time):</strong>
+                      Karena keterbatasan peralatan (hanya tersedia 1 atau 2 set peti lompat utama di sekolah), siswa harus mengantre bergiliran untuk mencoba gerakan utuh, berisiko menurunkan <em>Active Learning Time</em> (ALT-PE) dan intensitas denyut nadi latihan siswa.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Hambatan Psikologis yang Sangat Kontras (Fear Barrier):</strong>
+                      Meskipun telah tersedia level 2 peti, sebagian siswa perempuan dan siswa dengan obesitas tetap mengalami blokade mental untuk menumpukan tangan di atas peti kayu keras karena trauma terjatuh atau tersandung.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Beban Pengawasan Guru yang Sangat Padat:</strong>
+                      Guru harus berdiri di samping peti utama untuk menjaga pendaratan siswa (<em>critical spotting</em>) secara intensif demi menghindari cedera fraktur/dislokasi, sehingga perhatian guru untuk mengawasi kelompok pos latihan pengantar lainnya menjadi terbatas.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Pemanfaatan Teknologi Analisis Gerak Belum Optimal:</strong>
+                      Pada modul awal, belum terintegrasi instrumen digital pemutar ulang video gerak lambat (<em>slow-motion review</em>) secara terstruktur di sisi lapangan untuk membantu siswa mengevaluasi koreksi postur tangannya secara mandiri.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Solusi dan Mitigasi Lapangan -->
+            <div class="analysis-box-item solution">
+              <div class="analysis-box-title" style="color: var(--color-primary-dark); font-size: 1.2rem; border-bottom: 1px solid var(--color-border-light); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+                <i class="fa-solid fa-lightbulb" style="color: var(--color-accent-lime); font-size: 1.3rem;"></i>
+                Solusi & Rekomendasi Mitigasi Lapangan (Actionable Strategies)
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    1. Penerapan Sirkuit Multi-Pos (Circuit Stations)
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Membagi lapangan menjadi 3 stasiun simultan: <strong>Pos A</strong> (Drill tolakan kaki menggunakan papan rintangan hurdle), <strong>Pos B</strong> (Drill kekuatan tumpuan tangan di bangku panjang/lantai), dan <strong>Pos C</strong> (Praktik lompat peti bersama guru). Hal ini menaikkan waktu aktif belajar hingga 75%.
+                  </p>
+                </div>
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    2. Modifikasi Alat Ramah Pemula (Apparatus Modification)
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Melapisi permukaan dan sudut atas peti lompat kayu dengan matras busa tipis atau menyediakan balok busa empuk (<em>foam vaulting block</em>) bagi siswa yang mengalami trauma/kecemasan tinggi, sehingga menghilangkan rasa takut membentur bidang keras.
+                  </p>
+                </div>
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    3. Pemberdayaan Duta Keselamatan & Peer Tutor Terlatih
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Melatih 4 orang siswa yang memiliki keterampilan gerak tinggi dan postur kokoh sebagai asisten pengaman (<em>trained peer spotter</em>) di samping matras bersama guru, sehingga aspek proteksi keselamatan tetap terlaksana maksimal di setiap giliran.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- =========================================================
+             3. KAJIAN TEORI
+             ========================================================= -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">03</div>
+            <div>
+              <h3 class="analysis-module-title">Kajian Teori & Landasan Keilmuan PJOK</h3>
+              <p class="analysis-module-desc">
+                Justifikasi teoritis dari literatur psikologi gerak, teori belajar konstruktivistik, biomekanika olahraga, dan integrasi kerangka teknologi dalam pendidikan jasmani modern.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            
+            <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; margin-bottom: 2rem;">
+              Desain pembelajaran dalam Modul Ajar Siklus 1 ini didukung dan dipertanggungjawabkan secara ilmiah berdasarkan 5 pilar teori pendidikan jasmani dan pembelajaran motorik terkemuka:
+            </p>
+
+            <div class="theory-grid">
+              
+              <!-- Teori 1: Motor Learning Fitts & Posner -->
+              <div class="theory-card">
+                <span class="theory-badge">
+                  <i class="fa-solid fa-brain" style="margin-right: 5px;"></i> Psikologi Belajar Motorik
+                </span>
+                <h4 class="theory-title">Teori Tiga Tahap Belajar Motorik (Fitts & Posner, 1967)</h4>
+                <p class="theory-desc">
+                  Pembelajaran lompat kangkang menuntun siswa melalui 3 tahapan akuisisi gerak:
+                  <br><br>
+                  <strong>1. Tahap Kognitif:</strong> Siswa memahami gambaran mental (<em>mental blueprint</em>) urutan gerak lewat demonstrasi guru dan penjelasan visual.
+                  <br>
+                  <strong>2. Tahap Asosiatif:</strong> Siswa melatih drill parsial (awalan, tolakan, sikap mengangkang), mulai mendeteksi kesalahan gerak sendiri, dan menyelaraskan ritme gerak.
+                  <br>
+                  <strong>3. Tahap Otomatisasi:</strong> Pada level lanjutan, siswa mampu melakukan lompatan secara mulus tanpa beban berpikir berlebih dengan kontrol postural yang stabil.
+                </p>
+              </div>
+
+              <!-- Teori 2: Vygotsky ZPD & Scaffolding -->
+              <div class="theory-card">
+                <span class="theory-badge" style="background: rgba(184, 224, 35, 0.25);">
+                  <i class="fa-solid fa-stairs" style="margin-right: 5px;"></i> Konstruktivisme Sosial
+                </span>
+                <h4 class="theory-title">Zone of Proximal Development & Scaffolding (Vygotsky, 1978)</h4>
+                <p class="theory-desc">
+                  Siswa memiliki rentang kemampuan aktual (mampu melompat matras datar) dan kemampuan potensial (mampu melompati peti lompat 4 tingkat).
+                  <br><br>
+                  Penerapan <strong>tingkatan peti berjenjang (2, 3, 4, 5 peti)</strong> dan pendampingan <em>peer spotting</em> berfungsi sebagai <em>scaffolding</em> (penyangga pedagogis). Bantuan ini perlahan dikurangi seiring meningkatnya kompetensi dan kemandirian motorik peserta didik.
+                </p>
+              </div>
+
+              <!-- Teori 3: Biomekanika & Hukum Newton -->
+              <div class="theory-card">
+                <span class="theory-badge">
+                  <i class="fa-solid fa-atom" style="margin-right: 5px;"></i> Biomekanika Olahraga
+                </span>
+                <h4 class="theory-title">Hukum Impuls-Momentum & Tumbukan (Newtonian Mechanics)</h4>
+                <p class="theory-desc">
+                  Efektivitas lompat kangkang didasarkan pada prinsip biomekanika murni:
+                  <br><br>
+                  <strong>• Hukum III Newton (Aksi-Reaksi):</strong> Besarnya gaya injakan pada papan pegas menghasilkan gaya reaksi balik vertikal yang mengangkat titik berat badan (CG).
+                  <br>
+                  <strong>• Teorema Impuls-Momentum (\(F \cdot \Delta t = \Delta p\)):</strong> Pendaratan dengan mengeper (fleksi lutut 45°–60°) memperpanjang waktu deselerasi (\(\Delta t\)), mereduksi gaya tumbukan (\(F\)) ke sendi pergelangan kaki dan lutut hingga 60%.
+                </p>
+              </div>
+
+              <!-- Teori 4: TPACK Framework -->
+              <div class="theory-card">
+                <span class="theory-badge" style="background: rgba(18, 56, 45, 0.08);">
+                  <i class="fa-solid fa-laptop-code" style="margin-right: 5px;"></i> Inovasi Pembelajaran Digital
+                </span>
+                <h4 class="theory-title">Kerangka Kerja TPACK (Mishra & Koehler, 2006)</h4>
+                <p class="theory-desc">
+                  Integrasi holistik antara Pengetahuan Konten senam alat (CK), Pedagogi diferensiasi bertahap (PK), dan Teknologi Digital (TK).
+                  <br><br>
+                  Melalui rekaman gerak lambat (<em>slow-motion video capture</em>) pada smartphone/tablet di tepi lintasan, siswa dapat membandingkan sudut bukaan tungkai dan posisi tumpuan telapak tangan mereka secara visual langsung, mempercepat koreksi kinestetik mandiri.
+                </p>
+              </div>
+
+              <!-- Teori 5: Self-Determination Theory -->
+              <div class="theory-card">
+                <span class="theory-badge">
+                  <i class="fa-solid fa-heart-pulse" style="margin-right: 5px;"></i> Psikologi Motivasi
+                </span>
+                <h4 class="theory-title">Teori Determinasi Diri (Deci & Ryan, 2000)</h4>
+                <p class="theory-desc">
+                  Motivasi intrinsik siswa dalam menghadapi aktivitas olahraga yang berisiko meningkat saat 3 kebutuhan psikologis dasar terpenuhi:
+                  <br><br>
+                  <strong>• Autonomy (Otonomi):</strong> Kebebasan memilih level tantangan peti yang realistis tanpa paksaan.
+                  <br>
+                  <strong>• Competence (Kompetensi):</strong> Pengalaman sukses melompati level rendah membangun rasa mampu.
+                  <br>
+                  <strong>• Relatedness (Keterhubungan):</strong> Saling menjaga keamanan rekan menumbuhkan rasa saling percaya yang mendalam.
+                </p>
+              </div>
+
+              <!-- Teori 6: Profil Pelajar Pancasila -->
+              <div class="theory-card">
+                <span class="theory-badge" style="background: rgba(184, 224, 35, 0.25);">
+                  <i class="fa-solid fa-award" style="margin-right: 5px;"></i> Kurikulum Nasional
+                </span>
+                <h4 class="theory-title">Dimensi Profil Pelajar Pancasila (Kemendikbudristek)</h4>
+                <p class="theory-desc">
+                  Pembelajaran lompat kangkang menginternalisasikan karakter luhur:
+                  <br><br>
+                  <strong>• Mandiri:</strong> Regulasi diri mengendalikan ketakutan, disiplin pemanasan, dan keberanian mencoba.
+                  <br>
+                  <strong>• Gotong Royong:</strong> Berkolaborasi menyiapkan matras, merapikan alat, dan sigap mengamankan posisi rekan.
+                  <br>
+                  <strong>• Bernalar Kritis:</strong> Mengidentifikasi penyebab rekan tersangkut dan merumuskan saran perbaikan tumpuan secara objektif.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </article>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- =================================================================
+       5. AGENCY FOOTER
+       ================================================================= -->
+  <footer class="footer-agency">
+    <div class="container">
+      <div class="footer-agency-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-agency-col">
+          <div class="footer-agency-brand" style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem;">
+            <img src="../logo.png" alt="Logo UNY" class="footer-agency-logo-img" style="width: 46px; height: 46px; object-fit: contain; background: transparent; padding: 0; border: none; box-shadow: none; flex-shrink: 0;" onerror="this.style.display='none'">
+            <div class="footer-agency-brand-text">
+              <span class="title" style="display: block; font-size: 1.15rem; font-weight: 800; color: #ffffff;">Krisna Pratama, S.Pd.</span>
+              <span class="sub" style="display: block; font-size: 0.8rem; color: #94A3B8; font-weight: 600;">PPG Calon Guru PJOK UNY</span>
+            </div>
+          </div>
+          <p class="footer-agency-bio" style="color: #94A3B8; font-size: 0.88rem; line-height: 1.7;">
+            Portofolio resmi PPL Terbimbing Program Pendidikan Profesi Guru (PPG) Calon Guru Bidang Studi Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) Universitas Negeri Yogyakarta di SMA Laboratorium UNY.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-agency-col">
+          <h4 class="footer-agency-col-title">Navigasi Portofolio</h4>
+          <ul class="footer-agency-links">
+            <li><a href="../index.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Beranda Utama</a></li>
+            <li><a href="../profil.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Profil Lengkap Mahasiswa</a></li>
+            <li><a href="rancangan.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Siklus 1 (UTS PPL)</a></li>
+            <li><a href="../UAS/rancangan.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Siklus 2 (UAS PPL)</a></li>
+            <li><a href="../non-mengajar.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Kegiatan Non-Mengajar</a></li>
+            <li><a href="../dokumentasi.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Galeri Dokumentasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Perangkat PPL -->
+        <div class="footer-agency-col">
+          <h4 class="footer-agency-col-title">Perangkat Pembelajaran</h4>
+          <ul class="footer-agency-links">
+            <li><a href="rancangan.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Modul Ajar Siklus 1 & 2</a></li>
+            <li><a href="media.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Media Berbasis TPACK</a></li>
+            <li><a href="instrumen.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Instrumen Asesmen PJOK</a></li>
+            <li><a href="video.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Video Praktik Pembelajaran</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak & Alamat -->
+        <div class="footer-agency-col">
+          <h4 class="footer-agency-col-title">LPTK & Kontak Resmi</h4>
+          <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 0.75rem;">
+            <i class="fa-solid fa-location-dot" style="color: var(--color-accent-lime); margin-right: 6px;"></i> Kampus FIKK, Universitas Negeri Yogyakarta, Jl. Colombo No. 1, Sleman, D.I. Yogyakarta
+          </p>
+          <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 1.25rem;">
+            <i class="fa-solid fa-envelope" style="color: var(--color-accent-lime); margin-right: 6px;"></i> krisna.ppg@uny.ac.id
+          </p>
+          <div style="display: flex; gap: 0.6rem;">
+            <a href="javascript:void(0)" onclick="showToast('YouTube')" class="social-circle-btn"><i class="fa-brands fa-youtube"></i></a>
+            <a href="javascript:void(0)" onclick="showToast('Instagram')" class="social-circle-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="javascript:void(0)" onclick="showToast('LinkedIn')" class="social-circle-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-strip">
+        <div>
+          &copy; 2026 <strong>Krisna Pratama Aulihar, S.Pd.</strong> All Rights Reserved • PPG Calon Guru PJOK Universitas Negeri Yogyakarta.
+        </div>
+        <div>
+          Tema Desain: Modern Clean Green & Lime Agency Style
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
