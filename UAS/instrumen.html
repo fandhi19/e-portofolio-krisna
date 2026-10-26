@@ -1,16 +1,110 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UAS - Instrumen Penilaian PJOK | Krisna Pratama Aulihar, S.Pd. - UNY</title>
+  <title>UAS - Instrumen & Rubrik Penilaian PJOK | Krisna Pratama Aulihar, S.Pd. - UNY</title>
   
   <link rel="icon" type="image/png" href="../logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2•family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* Cycle Switcher Tabs for UAS */
+    .uas-tabs-wrapper {
+      display: flex;
+      gap: 0.85rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+    .uas-tab-btn {
+      background: #F8F9F5;
+      border: 1px solid var(--color-border-light);
+      color: var(--color-primary-dark);
+      padding: 0.85rem 1.65rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      transition: var(--transition-fast);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .uas-tab-btn:hover {
+      background: #FFFFFF;
+      border-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .uas-tab-btn.active {
+      background: var(--color-primary-dark);
+      color: #FFFFFF;
+      border-color: var(--color-primary-dark);
+      box-shadow: var(--shadow-md);
+    }
+    .uas-tab-btn.active i {
+      color: var(--color-accent-lime);
+    }
+    .uas-tab-badge {
+      background: rgba(184, 224, 35, 0.2);
+      color: var(--color-primary-dark);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.72rem;
+      font-weight: 800;
+      margin-left: 0.25rem;
+    }
+    .uas-tab-btn.active .uas-tab-badge {
+      background: var(--color-accent-lime);
+      color: var(--color-primary-dark);
+    }
+
+    /* Analysis Containers Transition */
+    .uas-analysis-container {
+      display: none;
+      animation: fadeInAnalysis 0.4s ease-in-out forwards;
+    }
+    .uas-analysis-container.active {
+      display: block;
+    }
+    @keyframes fadeInAnalysis {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Summary Card Grid */
+    .uas-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .uas-summary-card {
+      background: #F8F9F5;
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      border: 1px solid var(--color-border-light);
+      border-top: 4px solid var(--color-border-light);
+      transition: var(--transition-normal);
+      cursor: pointer;
+    }
+    .uas-summary-card:hover {
+      background: #FFFFFF;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .uas-summary-card.active {
+      background: #FFFFFF;
+      border-color: var(--color-primary-dark);
+      border-top: 4px solid var(--color-accent-lime);
+      box-shadow: var(--shadow-md);
+    }
+  </style>
 </head>
 <body>
 
@@ -20,9 +114,9 @@
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="topbar-contact">
-        <a href="tel:+6281234567890" class="topbar-item">
+        <a href="tel:+62859195374310" class="topbar-item">
           <i class="fa-solid fa-phone"></i>
-          <span>+62 812-3456-7890</span>
+          <span>+62 859-1953-74310</span>
         </a>
         <a href="mailto:krisna.ppg@uny.ac.id" class="topbar-item">
           <i class="fa-solid fa-envelope"></i>
@@ -113,20 +207,20 @@
         <span class="twin-dot-icon">
           <span></span><span></span>
         </span>
-        <span>UAS • SIKLUS 2 PPL TERBIMBING</span>
+        <span>UAS • SIKLUS 2, 3 & 4 PPL TERBIMBING</span>
       </div>
 
       <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--color-primary-dark); margin-bottom: 0.8rem;">
         Instrumen & Rubrik Penilaian (UAS)
       </h1>
-      <p style="max-width: 760px; font-size: 1.05rem; line-height: 1.6; color: var(--color-text-muted);">
-        Perangkat asesmen sumatif akhir, norma standar Tes Kebugaran Jasmani Indonesia (TKJI), dan lembar evaluasi reflektif diri peserta didik di SMA Laboratorium UNY.
+      <p style="max-width: 860px; font-size: 1.05rem; line-height: 1.6; color: var(--color-text-muted);">
+        Kompilasi instrumen asesmen otentik Kurikulum Merdeka Fase F (Kelas XI SMA) untuk Ujian Akhir Semester (UAS) / Siklus Lanjutan PPL Terbimbing di SMA N 3 Yogyakarta. Terdiri atas 3 siklus evaluasi komprehensif lengkap dengan <strong>analisis mandiri terpisah untuk setiap siklus</strong>: <strong>Siklus 2 (Futsal & TaRL)</strong>, <strong>Siklus 3 (Atletik Lari Jarak Menengah & Deep Learning)</strong>, dan <strong>Siklus 4 (Bola Basket Lay-Up Shoot & TaRL)</strong>.
       </p>
 
       <div class="subpage-breadcrumb">
         <a href="../index.html">Beranda</a>
         <i class="fa-solid fa-chevron-right"></i>
-        <span>Siklus 2 (UAS)</span>
+        <span>Siklus Lanjutan (UAS)</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span style="color: var(--color-primary-dark); font-weight: 700;">Instrumen Penilaian</span>
       </div>
@@ -134,73 +228,1110 @@
   </section>
 
   <!-- =================================================================
-       4. RUBRIC BOXES GRID
+       4. MAIN CONTENT: MULTI-SIKLUS PDF VIEWER & SEPARATE ANALYSES
        ================================================================= -->
   <main style="padding: 4rem 0 6rem; background: #FFFFFF;">
     <div class="container">
       
-      <div class="rubric-grid">
-        
-        <!-- Box 1: TKJI Nasional -->
-        <div class="rubric-box">
-          <span class="rubric-badge motorik">Tes Standar Nasional</span>
-          <h3 style="font-size: 1.25rem; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
-            Tes Kebugaran Jasmani Indonesia (TKJI)
-          </h3>
-          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6;">
-            Pedoman norma penilaian kebugaran siswa usia 16-19 tahun meliputi lari sprint 60m, gantung angkat tubuh (pull-up), baring duduk (sit-up), loncat tegak, dan lari jarak 1.200 meter.
+      <!-- =============================================================
+           A. MULTI-SIKLUS INTERACTIVE PDF VIEWER SECTION
+           ============================================================= -->
+      <section style="margin-bottom: 5rem;">
+        <div class="section-agency-head" style="margin-bottom: 2rem;">
+          <div class="badge-pill-group">
+            <span class="twin-dot-icon">
+              <span></span><span></span>
+            </span>
+            <span>DOKUMEN INSTRUMEN ASESMEN SIKLUS 2, 3 & 4</span>
+          </div>
+          <h2 class="section-agency-title">Pratinjau Instrumen Penilaian Digital (Pilih Siklus)</h2>
+          <p class="section-agency-subtitle">
+            Klik tombol siklus di bawah untuk menampilkan dokumen PDF instrumen asesmen terkait dan secara otomatis membuka <strong>analisis akademik khusus yang terpisah</strong> di bawah viewer.
           </p>
-          <ul class="rubric-list">
-            <li><span class="check-icon">âœ“</span> Tabel norma kategori resmi Kemenpora: Baik Sekali s/d Kurang</li>
-            <li><span class="check-icon">âœ“</span> Lembar rekapitulasi skor kumulatif kelas Fase E</li>
-            <li><span class="check-icon">âœ“</span> Persentase evaluasi peningkatan kebugaran pasca siklus 2</li>
-            <li><span class="check-icon">âœ“</span> Panduan pemanasan spesifik dan protokol keamanan tes fisik</li>
-          </ul>
-          <button class="btn btn-primary-dark btn-sm" style="width: 100%;" onclick="showToast('Mengunduh Instrumen TKJI (.PDF)...')">
-            <i class="fa-solid fa-download"></i> Unduh Instrumen TKJI
+        </div>
+
+        <!-- Cycle Switcher Tab Navigation -->
+        <div class="uas-tabs-wrapper">
+          <button id="tab-btn-2" class="uas-tab-btn active" onclick="switchUASInstrumen(2)">
+            <i class="fa-solid fa-futbol"></i>
+            <span>Siklus 2: Permainan Futsal</span>
+            <span class="uas-tab-badge">PBL & TaRL</span>
+          </button>
+
+          <button id="tab-btn-3" class="uas-tab-btn" onclick="switchUASInstrumen(3)">
+            <i class="fa-solid fa-person-running"></i>
+            <span>Siklus 3: Atletik Lari Menengah</span>
+            <span class="uas-tab-badge">Deep Learning</span>
+          </button>
+
+          <button id="tab-btn-4" class="uas-tab-btn" onclick="switchUASInstrumen(4)">
+            <i class="fa-solid fa-basketball"></i>
+            <span>Siklus 4: Bola Basket (Lay-Up)</span>
+            <span class="uas-tab-badge">PBL & TaRL</span>
           </button>
         </div>
 
-        <!-- Box 2: Asesmen Sumatif Kognitif -->
-        <div class="rubric-box">
-          <span class="rubric-badge kognitif">Penilaian Akhir Semester</span>
-          <h3 style="font-size: 1.25rem; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
-            Kisi-Kisi & Soal Sumatif Akhir PJOK
-          </h3>
-          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6;">
-            Soal pilihan ganda bernalar tingkat tinggi (HOTS) dan studi kasus penanganan cedera kram otot, dehidrasi olahraga, serta implementasi prinsip FITT (Frequency, Intensity, Time, Type).
-          </p>
-          <ul class="rubric-list">
-            <li><span class="check-icon">âœ“</span> 30 Butir Soal HOTS Kontekstual Berbasis Masalah Gerak</li>
-            <li><span class="check-icon">âœ“</span> Kunci Jawaban Lengkap & Rubrik Penilaian Soal Uraian</li>
-            <li><span class="check-icon">âœ“</span> Analisis Tingkat Kesukaran & Daya Pembeda Soal</li>
-            <li><span class="check-icon">âœ“</span> Format Terintegrasi Google Form / CBT Sekolah</li>
-          </ul>
-          <button class="btn btn-outline-dark btn-sm" style="width: 100%;" onclick="showToast('Bank Soal Sumatif UAS Dibuka!')">
-            <i class="fa-solid fa-file-lines"></i> Bank Soal Sumatif UAS
-          </button>
+        <!-- PDF Viewer Container Card -->
+        <div class="pdf-viewer-card">
+          <!-- Toolbar -->
+          <div class="pdf-viewer-toolbar">
+            <div class="pdf-toolbar-info">
+              <div class="pdf-toolbar-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+              <div>
+                <div id="uas-doc-title" class="pdf-toolbar-title">
+                  Instrumen Penilaian PJOK: Keterampilan Teknik Dasar Permainan Futsal
+                </div>
+                <div id="uas-doc-sub" class="pdf-toolbar-sub">
+                  Penyusun: <strong>Krisna Pratama Aulihar, S.Pd.</strong> • Siklus 2 UAS • Fase F / Kelas XI SMA • Alokasi: 2 Pertemuan (6 JP)
+                </div>
+              </div>
+            </div>
+
+            <div class="pdf-toolbar-actions">
+              <span id="uas-doc-badge" class="tag-pill" style="background: rgba(184, 224, 35, 0.2); color: #B8E023; font-weight: 700; border: 1px solid rgba(184, 224, 35, 0.4); padding: 6px 14px; font-size: 0.78rem;">
+                <i class="fa-solid fa-circle-check" style="margin-right: 5px;"></i> Terverifikasi LPTK UNY
+              </span>
+              <a id="uas-doc-download" href="../Dokumen/Instrumen Siklus 2.pdf" download="Instrumen_Penilaian_Futsal_Siklus2_KrisnaPratama.pdf" class="btn btn-primary-lime btn-sm">
+                <i class="fa-solid fa-file-arrow-down"></i> Unduh PDF (176 KB)
+              </a>
+              <a id="uas-doc-fullscreen" href="../Dokumen/Instrumen Siklus 2.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Layar Penuh
+              </a>
+            </div>
+          </div>
+
+          <!-- Embedded Frame -->
+          <div class="pdf-frame-wrapper">
+            <iframe 
+              id="uas-doc-iframe"
+              src="../Dokumen/Instrumen Siklus 2.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+              title="Instrumen Penilaian UAS Krisna Pratama Aulihar"
+              loading="lazy">
+              <p style="padding: 2rem; color: #FFFFFF; text-align: center;">
+                Peramban Anda tidak mendukung tampilan PDF langsung. Silakan 
+                <a id="uas-doc-fallback" href="../Dokumen/Instrumen Siklus 2.pdf" target="_blank" style="color: var(--color-accent-lime); font-weight: bold; text-decoration: underline;">
+                  Klik di sini untuk mengunduh dokumen instrumen penilaian (.PDF)
+                </a>.
+              </p>
+            </iframe>
+          </div>
+
+          <!-- Footer Metadata Bar (Dynamic) -->
+          <div id="uas-meta-bar" style="background: #F8F9F5; padding: 1.25rem 2rem; border-top: 1px solid var(--color-border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1.8rem; flex-wrap: wrap;">
+              <div style="font-size: 0.85rem; color: var(--color-text-muted);">
+                <i class="fa-solid fa-school" style="color: var(--color-primary-dark); margin-right: 6px;"></i>
+                <span id="uas-meta-school"><strong>Sekolah Mitra:</strong> SMA N 3 Yogyakarta</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--color-text-muted);">
+                <i class="fa-solid fa-calculator" style="color: var(--color-primary-dark); margin-right: 6px;"></i>
+                <span id="uas-meta-weight"><strong>Bobot Nilai:</strong> 50% Psikomotor + 30% Kognitif + 20% Afektif</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--color-text-muted);">
+                <i class="fa-solid fa-chart-line" style="color: var(--color-primary-dark); margin-right: 6px;"></i>
+                <span id="uas-meta-kktp"><strong>KKTP:</strong> Minimal 75 (Tuntas)</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--color-text-muted);">
+                <i class="fa-solid fa-sliders" style="color: var(--color-primary-dark); margin-right: 6px;"></i>
+                <span id="uas-meta-approach"><strong>Pendekatan:</strong> TaRL Station Skill Test (4 Skala)</span>
+              </div>
+            </div>
+            <div>
+              <a href="javascript:void(0)" onclick="showToast('Instrumen Resmi PPL Terbimbing PPG UNY')" style="font-size: 0.82rem; color: var(--color-primary-dark); font-weight: 700; text-decoration: none;">
+                <i class="fa-solid fa-circle-check" style="color: var(--color-accent-lime); margin-right: 5px;"></i> Kurikulum Merdeka 2026
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           B. 3-CYCLE QUICK SUMMARY CARDS
+           ============================================================= -->
+      <section style="margin-bottom: 4rem;">
+        <div style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 0.25rem;">
+              Ringkasan Matriks Instrumen Penilaian Siklus 2, 3, dan 4
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;">
+              Klik salah satu kartu untuk berpindah pratinjau dokumen instrumen dan membuka analisis akademik mendalam.
+            </p>
+          </div>
+          <span style="font-size: 0.8rem; background: #F1F5F9; color: var(--color-primary-dark); font-weight: 700; padding: 5px 12px; border-radius: var(--radius-pill);">
+            3 Siklus Mandiri
+          </span>
         </div>
 
-        <!-- Box 3: Self & Peer Assessment -->
-        <div class="rubric-box">
-          <span class="rubric-badge afektif">Evaluasi Diri Siswa</span>
-          <h3 style="font-size: 1.25rem; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
-            Lembar Peer & Self-Assessment Siswa
-          </h3>
-          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6;">
-            Instrumen refleksi bagi siswa untuk menilai komitmen latihan mandiri, kejujuran mencatat denyut nadi latihan di Google Form, serta sikap saling menghargai saat berpasangan.
+        <div class="uas-summary-grid">
+          
+          <!-- Summary Card Siklus 2 -->
+          <div id="sum-card-2" class="uas-summary-card active" onclick="switchUASInstrumen(2)">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <span class="tag-pill" style="background: var(--color-primary-dark); color: var(--color-accent-lime); font-size: 0.72rem; font-weight: 800;">
+                SIKLUS 2 • UAS
+              </span>
+              <i class="fa-solid fa-futbol" style="font-size: 1.5rem; color: var(--color-primary-dark);"></i>
+            </div>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+              Asesmen Futsal (TaRL & Station Test)
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Penilaian gerak passing-kontrol sol sepatu, dribbling slalom, dan shooting gawang mini berbasis pengelompokan kesiapan TaRL (Bimbingan, Berkembang, Mahir).
+            </p>
+            <div style="border-top: 1px dashed var(--color-border-light); padding-top: 0.85rem; font-size: 0.82rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
+              <div><i class="fa-solid fa-check" style="color: #65A30D; margin-right: 5px;"></i> Station Test Kinerja 4 Skala</div>
+              <div><i class="fa-solid fa-check" style="color: #65A30D; margin-right: 5px;"></i> Tes Tertulis Uraian Taktik HOTS</div>
+              <div><i class="fa-solid fa-check" style="color: #65A30D; margin-right: 5px;"></i> Observasi Sikap Sportivitas 3v3</div>
+            </div>
+          </div>
+
+          <!-- Summary Card Siklus 3 -->
+          <div id="sum-card-3" class="uas-summary-card" onclick="switchUASInstrumen(3)">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <span class="tag-pill" style="background: #1E3A8A; color: #93C5FD; font-size: 0.72rem; font-weight: 800;">
+                SIKLUS 3 • UAS
+              </span>
+              <i class="fa-solid fa-person-running" style="font-size: 1.5rem; color: #1E3A8A;"></i>
+            </div>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+              Asesmen Atletik Lari (Deep Learning)
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Evaluasi kesadaran penuh (<em>mindful running</em>) lari 800m & 1500m, strategi kontrol irama pacing, serta pemantauan denyut nadi pemulihan kardiorespirasi di LKPD.
+            </p>
+            <div style="border-top: 1px dashed var(--color-border-light); padding-top: 0.85rem; font-size: 0.82rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
+              <div><i class="fa-solid fa-check" style="color: #65A30D; margin-right: 5px;"></i> Asesmen Diagnostik Pacing 3 Menit</div>
+              <div><i class="fa-solid fa-check" style="color: #65A30D; margin-right: 5px;"></i> Simulasi Lomba & Rubrik Gerak</div>
+              <div><i class="fa-solid fa-check" style="color: #65A30D; margin-right: 5px;"></i> Analisis Nadi & Skala Borg RPE</div>
+            </div>
+          </div>
+
+          <!-- Summary Card Siklus 4 -->
+          <div id="sum-card-4" class="uas-summary-card" onclick="switchUASInstrumen(4)">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <span class="tag-pill" style="background: #9A3412; color: #FDBA74; font-size: 0.72rem; font-weight: 800;">
+                SIKLUS 4 • UAS
+              </span>
+              <i class="fa-solid fa-basketball" style="font-size: 1.5rem; color: #9A3412;"></i>
+            </div>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+              Asesmen Basket Lay-Up (Rantai Kinetik)
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Rubrik unjuk kerja 5 fase rantai gerak (awalan, 2 langkah footwork, tolakan 1 kaki, rilis sudut 45° backboard, pendaratan) dengan diferensiasi TaRL.
+            </p>
+            <div style="border-top: 1px dashed var(--color-border-light); padding-top: 0.85rem; font-size: 0.82rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
+              <div><i class="fa-solid fa-check" style="color: #65A30D; margin-right: 5px;"></i> Diagnostik Irama Footwork (Right-Left-Up)</div>
+              <div><i class="fa-solid fa-check" style="color: #65A30D; margin-right: 5px;"></i> Unjuk Kerja 5 Komponen Berjenjang</div>
+              <div><i class="fa-solid fa-check" style="color: #65A30D; margin-right: 5px;"></i> Tes Tertulis Fisika Pantul & Sudut</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =============================================================
+           C. SEPARATE COMPREHENSIVE ANALYSES (1 SIKLUS = 1 ANALISIS)
+           ============================================================= -->
+
+      <!-- =============================================================
+           CONTAINER SIKLUS 2: ANALISIS INSTRUMEN PERMAINAN FUTSAL
+           ============================================================= -->
+      <div id="analysis-siklus-2" class="uas-analysis-container active">
+        <div class="section-agency-head" style="margin-bottom: 3.5rem;">
+          <div class="badge-pill-group">
+            <span class="twin-dot-icon">
+              <span></span><span></span>
+            </span>
+            <span>ANALISIS INSTRUMEN • SIKLUS 2 (FUTSAL)</span>
+          </div>
+          <h2 class="section-agency-title">Analisis Akademik & Refleksi Kritis Asesmen Futsal</h2>
+          <p class="section-agency-subtitle">
+            Kajian pedagogis terhadap perancangan instrumen penilaian keterampilan dasar futsal berbasis Teaching at the Right Level (TaRL) dan Problem-Based Learning di SMA N 3 Yogyakarta.
           </p>
-          <ul class="rubric-list">
-            <li><span class="check-icon">âœ“</span> Checklist kejujuran pencatatan repetisi tiap stasiun pos</li>
-            <li><span class="check-icon">âœ“</span> Format umpan balik apresiasi rekan sejawat (peer feedback)</li>
-            <li><span class="check-icon">âœ“</span> Jurnal komitmen menjaga pola hidup aktif di lingkungan rumah</li>
-            <li><span class="check-icon">âœ“</span> Skala Likert 4 opsi pilihan terarah</li>
-          </ul>
-          <button class="btn btn-outline-dark btn-sm" style="width: 100%;" onclick="showToast('Format Self-Assessment Siap!')">
-            <i class="fa-solid fa-user-check"></i> Lembar Penilaian Diri
-          </button>
         </div>
 
+        <!-- 01. Konteks dan Tujuan (Futsal) -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">01</div>
+            <div>
+              <h3 class="analysis-module-title">Konteks dan Tujuan Instrumen Penilaian Futsal</h3>
+              <p class="analysis-module-desc">
+                Tinjauan karakteristik asesmen cabang olahraga invasi di lapangan indoor berkecepatan tinggi, pemetaan heterogenitas gerak peserta didik SMA, serta dekonstruksi 3 ranah asesmen.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            <div style="margin-bottom: 2.5rem;">
+              <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.65rem;">
+                <i class="fa-solid fa-futbol" style="color: var(--color-primary-dark); font-size: 1.1rem;"></i>
+                A. Konteks Lapangan & Karakteristik Cabang Permainan Invasi Ruang Terbatas
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; margin-bottom: 1.2rem;">
+                Futsal merupakan olahraga invasi beregu dengan dinamika gerak cepat (<em>high-tempo invasion game</em>) di atas lantai keras berukuran terbatas. Karakteristik ini menuntut perancangan instrumen asesmen yang mampu mengevaluasi koordinasi ketepatan gerak, kecepatan reaksi, serta kerjasama taktis:
+              </p>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid var(--color-primary-dark);">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-users" style="margin-right: 6px;"></i> Kesenjangan Keterampilan Antara Siswa Ekskul vs Reguler
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Di kelas XI SMA N 3 Yogyakarta, terdapat siswa yang telah aktif di akademi futsal/klub, sementara sebagian lainnya belum menguasai teknik dasar perkenaan sol sepatu (<em>sole control</em>). Instrumen wajib menyediakan asesmen diagnostik TaRL agar penilaian tidak memicu demotivasi bagi pemula.
+                  </p>
+                </div>
+
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid #F59E0B;">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-shoe-prints" style="margin-right: 6px; color: #F59E0B;"></i> Kekhasan Teknik Kontrol Sol Sepatu (Sole of the Foot)
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Berbeda dengan sepak bola lapangan rumput, futsal menuntut kontrol bola mutlak menggunakan telapak sepatu (sol) demi menghentikan laju pantulan bola rendah secara seketika di atas lantai semen/kayu. Rubrik keterampilan memuat indikator spesifik ini secara proporsional.
+                  </p>
+                </div>
+
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid var(--color-accent-lime);">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-network-wired" style="margin-right: 6px;"></i> Penilaian Berkelanjutan Berbasis Stasiun (Station Test)
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Instrumen disusun ke dalam pos stasiun keterampilan (Pos 1: Passing-Kontrol berpasangan, Pos 2: Dribbling zig-zag rintangan cone, Pos 3: Shooting akurasi target sudut gawang). Pola ini memaksimalkan efisiensi waktu unjuk kerja tanpa antrean pasif di lapangan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dekonstruksi Asesmen Otentik Futsal -->
+            <div>
+              <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.65rem;">
+                <i class="fa-solid fa-list-check" style="color: var(--color-primary-dark); font-size: 1.1rem;"></i>
+                B. Dekonstruksi 3 Dimensi Asesmen & Formula Penilaian Akhir (50:30:20)
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1.4rem;">
+                Instrumen mengintegrasikan asesmen proses dan produk gerak ke dalam format proporsional:
+              </p>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem;">
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: var(--color-primary-dark); color: var(--color-accent-lime); font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    BOBOT 50% • PSIKOMOTOR
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Station Test Keterampilan Futsal
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Menilai 4 aspek unjuk kerja: (1) <strong>Passing & Kontrol Sol:</strong> Ketepatan laju bola mendatar dan penguncian pergelangan kaki; (2) <strong>Dribbling:</strong> Kelincahan melewati rintangan cone dengan sentuhan sol/punggung kaki; (3) <strong>Shooting:</strong> Akurasi tembakan keras instep ke sudut target sasaran; (4) <strong>Keseimbangan Tubuh Dinamis</strong> selama penguasaan bola (Skor total 16).
+                  </p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: var(--color-primary-dark); color: var(--color-accent-lime); font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    BOBOT 30% • KOGNITIF
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Tes Tertulis Uraian Taktik & Regulasi
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Menguji 5 butir soal pemahaman konseptual: fungsi passing sol sepatu dalam meminimalisir turnover, analisis posisi badan condong ke depan saat shooting keras, mekanika kaki tumpu sejajar bola, regulasi backpass kiper 4 detik, serta taktik rotasi bertahan 3v3.
+                  </p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: var(--color-primary-dark); color: var(--color-accent-lime); font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    BOBOT 20% • AFEKTIF
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Observasi Profil Pelajar Pancasila
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Memantau karakter siswa dalam situasi simulasi pertandingan: <strong>Gotong Royong</strong> (berbagi bola dan komunikasi suportif antar rekan), <strong>Mandiri</strong> (kedisiplinan posisi transisi bertahan), dan <strong>Sportivitas</strong> (menghormati lawan dan mengakui bola keluar tanpa emosi).
+                  </p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: #65A30D; color: #FFFFFF; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    FORMULA & TINDAK LANJUT
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Nilai Akhir & KKTP 75 (TaRL Grouping)
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Formula: <strong>NA = (Ket × 50%) + (Peng × 30%) + (Sikap × 20%)</strong>. Standar KKTP ≥ 75. Siswa kategori <em>Perlu Bimbingan</em> mendapat drill remedial passing dinding statis; siswa <em>Mahir</em> bertindak sebagai kapten tim dan tutor sebaya dalam game bersyarat (touch-limit rule).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02. Kelebihan dan Kekurangan (Futsal) -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">02</div>
+            <div>
+              <h3 class="analysis-module-title">Kelebihan dan Kekurangan Instrumen Penilaian Futsal</h3>
+              <p class="analysis-module-desc">
+                Evaluasi komparatif terhadap kekuatan desain penskoran stasiun, keterbatasan pengamatan manuver cepat, serta strategi intervensi lapangan.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            <div class="analysis-grid-2col">
+              <!-- Kelebihan -->
+              <div class="analysis-box-item pro">
+                <div class="analysis-box-title" style="color: var(--color-primary-dark);">
+                  <i class="fa-solid fa-circle-check" style="color: #65A30D; font-size: 1.3rem;"></i>
+                  Kelebihan & Keunggulan Instrumen (Strengths)
+                </div>
+                <ul class="analysis-list">
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Objektivitas Tinggi Melalui Target Kinerja Terukur:</strong>
+                      Instrumen menggunakan kriteria presisi (jumlah rintangan cone yang dilalui tanpa menyentuh, target kotak sudut gawang), mengurangi subjektivitas penilai dalam menentukan predikat angka.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Diferensiasi TaRL Melindungi Psikologis Siswa Pemula:</strong>
+                      Melalui lembar diagnostik Lampiran 1, siswa pemula dinilai berdasarkan ketepatan perkenaan sol sepatu pada jarak dekat tanpa dihadapkan pada tekanan intersep lawan yang agresif.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Menilai Aspek Kognitif Taktis & Regulasi Permainan:</strong>
+                      Tidak hanya menilai kemampuan otot kaki (fisik), tetapi juga menguji pemahaman aturan spesifik futsal (aturan 4 detik, backpass kiper) yang esensial untuk kecerdasan bertanding (<em>game intelligence</em>).
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Kekurangan -->
+              <div class="analysis-box-item con">
+                <div class="analysis-box-title" style="color: #B45309;">
+                  <i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B; font-size: 1.3rem;"></i>
+                  Kelemahan & Tantangan Implementasi (Limitations)
+                </div>
+                <ul class="analysis-list">
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Sifat Tes Terisolasi (Decontextualized Drill):</strong>
+                      Tes keterampilan stasiun mengukur teknik dalam situasi statis tanpa tekanan lawan aktif (<em>defensive pressure</em>), sehingga belum seutuhnya mencerminkan kemampuan pengambilan keputusan dinamis di pertandingan sesungguhnya.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Kebutuhan Sarana Bola Futsal Terstandar:</strong>
+                      Pelaksanaan tes stasiun secara simultan membutuhkan minimal 10–12 bola futsal ukuran 4 (<em>low-bounce</em>). Bila sarana bola terbatas, alur penilaian stasiun mengalami perlambatan.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Pengamatan Afektif dalam Permainan Cepat yang Fluktuatif:</strong>
+                      Sikap sportivitas dan kerjasama terkadang sulit terdokumentasi secara konsisten oleh satu orang guru saat permainan 3v3 berjalan dengan intensitas emosional yang tinggi.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Solusi Lapangan -->
+            <div class="analysis-box-item solution">
+              <div class="analysis-box-title" style="color: var(--color-primary-dark); font-size: 1.2rem; border-bottom: 1px solid var(--color-border-light); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+                <i class="fa-solid fa-lightbulb" style="color: var(--color-accent-lime); font-size: 1.3rem;"></i>
+                Solusi & Rekomendasi Mitigasi Lapangan (Futsal)
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    1. Integrasi GPAI (Game Performance Assessment Instrument)
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Menggabungkan skor tes stasiun dengan observasi GPAI pada sesi Small-Sided Games 3v3 untuk menilai komponen <em>Decision Making</em> (memilih opsi umpan yang tepat) dan <em>Support Play</em> (membuka ruang tanpa bola).
+                  </p>
+                </div>
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    2. Pemanfaatan Asisten Penilai Sebaya (Student Scorer)
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Menugaskan siswa cadangan di pos stasiun passing untuk menghitung jumlah umpan akurat menggunakan counter digital, sehingga guru dapat memusatkan observasi pada analisis kebenaran sikap tubuh dan perkenaan kaki tumpu.
+                  </p>
+                </div>
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    3. Format Sirkuit Rotasi Berwaktu (Timed Circuit Test)
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Mengatur rotasi setiap pos stasiun menggunakan alarm peluit interval 3 menit, sehingga seluruh kelompok TaRL menyelesaikan tes psikomotorik tepat waktu dalam 1 pertemuan (3 JP).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03. Kajian Teori (Futsal) -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">03</div>
+            <div>
+              <h3 class="analysis-module-title">Kajian Teori Evaluasi Olahraga Invasi & Permainan Bola</h3>
+              <p class="analysis-module-desc">
+                Landasan ilmiah dari konsep asesmen permainan invasi TGfU, teori belajar motorik terbuka, kerangka TaRL, dan psikometri rubrik olahraga beregu.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; margin-bottom: 2rem;">
+              Perancangan instrumen penilaian Siklus 2 Futsal dipertanggungjawabkan melalui landasan keilmuan pendidikan jasmani berikut:
+            </p>
+
+            <div class="theory-grid">
+              <div class="theory-card">
+                <span class="theory-badge"><i class="fa-solid fa-gamepad" style="margin-right: 5px;"></i> Pedagogi Permainan</span>
+                <h4 class="theory-title">Teaching Games for Understanding / TGfU (Bunker & Thorpe, 1982)</h4>
+                <p class="theory-desc">
+                  TGfU menekankan bahwa penguasaan teknik dasar olahraga invasi harus dievaluasi dalam kerangka pemahaman taktis (<em>tactical awareness</em>). Instrumen futsal mengaitkan eksekusi passing-kontrol dengan konteks pemecahan masalah ruang sempit dalam permainan mini 3v3.
+                </p>
+              </div>
+
+              <div class="theory-card">
+                <span class="theory-badge" style="background: rgba(184, 224, 35, 0.25);"><i class="fa-solid fa-layer-group" style="margin-right: 5px;"></i> Diferensiasi Pembelajaran</span>
+                <h4 class="theory-title">Teaching at the Right Level / TaRL (Banerjee, Duflo, & Pratham)</h4>
+                <p class="theory-desc">
+                  Instrumen menerapkan asesmen diagnostik berbasis kompetensi nyata peserta didik. Penilaian tidak menghukum siswa yang belum mahir, melainkan menempatkan mereka pada lintasan latihan yang terukur dengan rubrik keberhasilan bertahap.
+                </p>
+              </div>
+
+              <div class="theory-card">
+                <span class="theory-badge"><i class="fa-solid fa-shuffle" style="margin-right: 5px;"></i> Psikologi Motorik</span>
+                <h4 class="theory-title">Teori Open Skill vs Closed Skill Assessment (Poulton, 1957; Schmidt)</h4>
+                <p class="theory-desc">
+                  Futsal diklasifikasikan sebagai <em>open motor skill</em> karena lingkungannya yang dinamis dan berubah-ubah. Instrumen memadukan penilaian keterampilan tertutup (station drill) dengan penilaian keterampilan terbuka (game form) untuk memperoleh validitas evaluasi yang komprehensif.
+                </p>
+              </div>
+
+              <div class="theory-card">
+                <span class="theory-badge" style="background: rgba(184, 224, 35, 0.25);"><i class="fa-solid fa-trophy" style="margin-right: 5px;"></i> Model Pendidikan Olahraga</span>
+                <h4 class="theory-title">Sport Education Model & Afektif Sportivitas (Daryl Siedentop, 1994)</h4>
+                <p class="theory-desc">
+                  Menilai perilaku afektif peserta didik bukan sekadar ketaatan aturan, tetapi pemaknaan nilai-nilai <em>competent, literate, and enthusiastic sportsmanship</em>. Rubrik observasi sikap memantau tanggung jawab etis siswa saat timnya tertinggal angka.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- =============================================================
+           CONTAINER SIKLUS 3: ANALISIS INSTRUMEN ATLETIK LARI MENENGAH
+           ============================================================= -->
+      <div id="analysis-siklus-3" class="uas-analysis-container">
+        <div class="section-agency-head" style="margin-bottom: 3.5rem;">
+          <div class="badge-pill-group">
+            <span class="twin-dot-icon">
+              <span></span><span></span>
+            </span>
+            <span>ANALISIS INSTRUMEN • SIKLUS 3 (ATLETIK LARI JARAK MENENGAH)</span>
+          </div>
+          <h2 class="section-agency-title">Analisis Akademik & Refleksi Kritis Asesmen Atletik (Deep Learning)</h2>
+          <p class="section-agency-subtitle">
+            Kajian ilmiah terhadap instrumen evaluasi lari jarak menengah (800m & 1500m) berpendekatan Deep Learning, pemantauan pacing kardiorespirasi, dan kesadaran kinestetik di SMA N 3 Yogyakarta.
+          </p>
+        </div>
+
+        <!-- 01. Konteks dan Tujuan (Atletik) -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">01</div>
+            <div>
+              <h3 class="analysis-module-title">Konteks dan Tujuan Instrumen Penilaian Atletik Lari Menengah</h3>
+              <p class="analysis-module-desc">
+                Tinjauan tuntutan fisiologis kapasitas aerobik-anaerobik pada remaja, pembebasan diri dari paradigma lari cepat stopwatch murni, serta integrasi pemantauan denyut nadi pemulihan.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            <div style="margin-bottom: 2.5rem;">
+              <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.65rem;">
+                <i class="fa-solid fa-heart-pulse" style="color: #1E3A8A; font-size: 1.1rem;"></i>
+                A. Konteks Fisiologis & Karakteristik Cabang Lari Jarak Menengah (800m & 1500m)
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; margin-bottom: 1.2rem;">
+                Lari jarak menengah merupakan nomor perlombaan yang sangat menguras fisik karena menuntut keseimbangan antara kapasitas aerobik (daya tahan) dan kapasitas anaerobik (kecepatan & toleransi asam laktat). Konteks perancangan instrumen mencakup:
+              </p>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid #1E3A8A;">
+                  <strong style="display: block; color: #1E3A8A; font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-gauge-high" style="margin-right: 6px;"></i> Kesalahan Pola Pacing Pemula (Early Sprint Mistake)
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Siswa SMA cenderung melakukan sprint habis-habisan pada 100 meter pertama, yang mengakibatkan akumulasi asam laktat prematur dan kelelahan ekstrem di putaran akhir. Instrumen dirancang untuk menilai kecerdasan pengaturan irama langkah (<em>pacing strategy</em>), bukan sekadar mencatat waktu akhir.
+                  </p>
+                </div>
+
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid #F59E0B;">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-lungs" style="margin-right: 6px; color: #F59E0B;"></i> Regulasi Pernapasan Ritmis & Mindful Running
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Melalui pendekatan Deep Learning, siswa dilatih menyadari pola napas ritmis (rasio 2:2 atau 3:3 langkah per inhalasi/ekshalasi). Lembar observasi formatif memantau ketenangan mental dan kesadaran tubuh siswa saat menghadapi kelelahan fisiologis.
+                  </p>
+                </div>
+
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid var(--color-accent-lime);">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-stopwatch" style="margin-right: 6px;"></i> Edukasi Pemantauan Denyut Nadi Pemulihan (Recovery HR)
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Instrumen dilengkapi lembar LKPD pencatatan denyut nadi latihan (10 detik pasca-lari) dan denyut nadi pemulihan (setelah istirahat 3 menit), menghubungkan aktivitas fisik lapangan dengan literasi sains keolahragaan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dekonstruksi Asesmen Lari Menengah -->
+            <div>
+              <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.65rem;">
+                <i class="fa-solid fa-file-waveform" style="color: #1E3A8A; font-size: 1.1rem;"></i>
+                B. Dekonstruksi 3 Dimensi Asesmen Otentik Lari Jarak Menengah (50:30:20)
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1.4rem;">
+                Struktur penilaian menyeluruh mencakup psikomotorik gerak, pemahaman faal tubuh, serta karakter ketekunan:
+              </p>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem;">
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: #1E3A8A; color: #93C5FD; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    BOBOT 50% • PSIKOMOTOR
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Rubrik Unjuk Kerja Simulasi Lomba
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Menilai 3 fase gerak terkoordinasi: (1) <strong>Start Berdiri & Postur:</strong> Kaki tumpu condong stabil di belakang garis dan postur rileks saat fase awal; (2) <strong>Pacing & Irama Langkah:</strong> Konsistensi split-time per putaran (lap time) dengan ayunan lengan efisien; (3) <strong>Teknik Tikungan & Finis:</strong> Kemiringan tubuh ke arah dalam lintasan serta percepatan langkah akhir (<em>kick finish</em>) (Skor total 12).
+                  </p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: #1E3A8A; color: #93C5FD; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    BOBOT 30% • KOGNITIF
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Analisis Fisiologis & Refleksi LKPD
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Uji pemahaman tertulis 5 soal analitik: perbedaan sistem energi aerobik-anaerobik, penyebab kelelahan otot akibat penumpukan asam laktat, cara menghitung target denyut nadi latihan (Training Heart Rate), manfaat pernapasan ritmis 2:2, dan evaluasi kurva pacing pribadi.
+                  </p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: #1E3A8A; color: #93C5FD; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    BOBOT 20% • AFEKTIF
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Observasi Profil Pelajar Pancasila
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Memantau <strong>Mandiri</strong> (ketahanan mental dan regulasi diri mengatasi rasa lelah saat berlari), <strong>Gotong Royong</strong> (saling menyemangati dan kolaborasi dalam estafet kelompok), serta <strong>Bernalar Kritis</strong> (kemampuan menganalisis kesalahan pacing rekan).
+                  </p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: #65A30D; color: #FFFFFF; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    FORMULA & TINDAK LANJUT
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Nilai Akhir & KKTP 75 (Diferensiasi)
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Formula: <strong>NA = (Ket × 50%) + (Peng × 30%) + (Sikap × 20%)</strong>. Standar KKTP 75. Siswa kategori <em>Perlu Bimbingan</em> mendapat pendampingan kapten pacing pada jarak 400m berpanduan peluit ritmis; siswa <em>Sangat Mahir</em> diberi peran sebagai pacer ritmis bagi rekan sekelas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02. Kelebihan dan Kekurangan (Atletik) -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">02</div>
+            <div>
+              <h3 class="analysis-module-title">Kelebihan dan Kekurangan Instrumen Penilaian Atletik</h3>
+              <p class="analysis-module-desc">
+                Analisis kritis pergeseran dari asesmen stopwatch murni menuju pemahaman kesadaran tubuh, kendala teknis pencatatan denyut nadi mandiri, serta solusi mitigasinya.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            <div class="analysis-grid-2col">
+              <!-- Kelebihan -->
+              <div class="analysis-box-item pro">
+                <div class="analysis-box-title" style="color: #1E3A8A;">
+                  <i class="fa-solid fa-circle-check" style="color: #65A30D; font-size: 1.3rem;"></i>
+                  Kelebihan & Keunggulan Instrumen (Strengths)
+                </div>
+                <ul class="analysis-list">
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Mendobrak Paradigma Stopwatch Murni (Holistic Assessment):</strong>
+                      Siswa tidak divonis hanya berdasarkan catatan waktu detik, melainkan dinilai dari pemahaman efisiensi gerak, teknik pernapasan, dan konsistensi distribusi energi putaran.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Integrasi Literasi Fisiologi & Sains Keolahragaan:</strong>
+                      Penggunaan LKPD denyut nadi mendidik peserta didik memahami kondisi faal tubuhnya sendiri, menumbuhkan kesadaran kesehatan kardiorespirasi jangka panjang (<em>lifelong physical fitness</em>).
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Penerapan Game Form Formatif (Pacing Challenge):</strong>
+                      Asesmen formatif dikemas dalam bentuk tantangan permainan irama, sehingga mengurangi rasa takut dan kejenuhan siswa terhadap materi lari jarak jauh.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Kekurangan -->
+              <div class="analysis-box-item con">
+                <div class="analysis-box-title" style="color: #B45309;">
+                  <i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B; font-size: 1.3rem;"></i>
+                  Kelemahan & Tantangan Implementasi (Limitations)
+                </div>
+                <ul class="analysis-list">
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Akurasi Penghitungan Denyut Nadi Manual Siswa:</strong>
+                      Dalam kondisi terengah-engah pasca-lari, sebagian siswa kesulitan menemukan denyut arteri radialis/karotis secara cepat, sehingga data detak nadi yang dicatat di LKPD berisiko kurang presisi.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Sensitivitas Cuaca & Faktor Termal Lintasan:</strong>
+                      Asesmen lari di lapangan terbuka sangat dipengaruhi suhu udara terik Yogyakarta pada siang hari yang dapat mendistorsi daya tahan kardiorespirasi peserta didik.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Beban Pemantauan Split-Time Banyak Siswa:</strong>
+                      Guru kesulitan mencatat waktu putaran per lap secara simultan untuk 30 siswa tanpa bantuan asisten pencatat waktu khusus di sisi lintasan.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Solusi Lapangan -->
+            <div class="analysis-box-item solution">
+              <div class="analysis-box-title" style="color: var(--color-primary-dark); font-size: 1.2rem; border-bottom: 1px solid var(--color-border-light); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+                <i class="fa-solid fa-lightbulb" style="color: var(--color-accent-lime); font-size: 1.3rem;"></i>
+                Solusi & Rekomendasi Mitigasi Lapangan (Atletik Lari Menengah)
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    1. Penggunaan Pulse Oximeter Portabel & Skala Borg RPE
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Menyediakan 3 unit pulse oximeter jepit jari di garis finis untuk memvalidasi denyut nadi siswa secara instan, serta memadukannya dengan skala persepsi lelah Borg RPE (skala 6–20) yang mudah dijawab secara kualitatif.
+                  </p>
+                </div>
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    2. Sistem Pacer Buddy (Rekan Pengamat Waktu)
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Membagi siswa berpasangan: saat Siswa A berlari di heat 1, Siswa B berdiri di garis 200m memegang stopwatch dan mencatat split time lap, lalu bertukar peran di heat 2.
+                  </p>
+                </div>
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    3. Pengaturan Jadwal Asesmen Pagi Hari & Pos Hidrasi
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Melaksanakan asesmen simulasi lari sebelum pukul 08.30 WIB dengan fasilitas tenda peneduh dan penyediaan air minum elektrolit di tepi lintasan untuk menjamin keselamatan faal tubuh peserta didik.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03. Kajian Teori (Atletik) -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">03</div>
+            <div>
+              <h3 class="analysis-module-title">Kajian Teori Evaluasi Fisiologi Olahraga & Deep Learning</h3>
+              <p class="analysis-module-desc">
+                Justifikasi ilmiah dari kerangka Deep Learning 6C, model kontrol otak Central Governor, fisiologi laktat, dan metakognisi pembelajaran jasmani.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; margin-bottom: 2rem;">
+              Konstruksi instrumen lari jarak menengah ini berpijak pada fondasi teori keolahragaan modern:
+            </p>
+
+            <div class="theory-grid">
+              <div class="theory-card">
+                <span class="theory-badge"><i class="fa-solid fa-brain" style="margin-right: 5px;"></i> Pedagogi Masa Depan</span>
+                <h4 class="theory-title">Deep Learning Framework (Michael Fullan, Quinn, & McEachen, 2018)</h4>
+                <p class="theory-desc">
+                  Pembelajaran mendalam menuntut siswa menghubungkan konsep sains ke dalam aksi bermakna. Siswa tidak hanya berlari, tetapi mengeksplorasi hubungan antara intensitas langkah, ritme ventilasi paru-paru, dan akumulasi asam laktat melalui refleksi LKPD mandiri.
+                </p>
+              </div>
+
+              <div class="theory-card">
+                <span class="theory-badge" style="background: rgba(184, 224, 35, 0.25);"><i class="fa-solid fa-heart-pulse" style="margin-right: 5px;"></i> Fisiologi Olahraga</span>
+                <h4 class="theory-title">Teori Central Governor Model & Pacing (Timothy Noakes, 2004)</h4>
+                <p class="theory-desc">
+                  Noakes membuktikan bahwa kelelahan dalam lari jarak jauh bukan semata kerusakan otot perifer, melainkan regulasi perlindungan otak (<em>central governor</em>). Pengajaran strategi pacing melatih sistem saraf siswa untuk memperkirakan ketersediaan cadangan energi hingga garis akhir.
+                </p>
+              </div>
+
+              <div class="theory-card">
+                <span class="theory-badge"><i class="fa-solid fa-chart-simple" style="margin-right: 5px;"></i> Psikometri Beban Kerja</span>
+                <h4 class="theory-title">Rating of Perceived Exertion / RPE Scale (Gunnar Borg, 1982)</h4>
+                <p class="theory-desc">
+                  Instrumen memanfaatkan korelasi kuat antara persepsi subjektif lelah (RPE) dengan laju denyut jantung aktual. Melatih siswa memperkirakan intensitas beban kerja melatih kepekaan kinestetik internal yang sangat bermanfaat bagi kebugaran seumur hidup.
+                </p>
+              </div>
+
+              <div class="theory-card">
+                <span class="theory-badge" style="background: rgba(184, 224, 35, 0.25);"><i class="fa-solid fa-graduation-cap" style="margin-right: 5px;"></i> Psikologi Belajar</span>
+                <h4 class="theory-title">Self-Regulated Learning dalam Olahraga (Barry Zimmerman, 2002)</h4>
+                <p class="theory-desc">
+                  Peserta didik menjadi pembelajar mandiri yang mampu merencanakan target ritme (<em>forethought</em>), memantau kecepatan langkahnya saat berlari (<em>performance control</em>), serta merefleksikan hasil denyut nadi pemulihannya (<em>self-reflection</em>).
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- =============================================================
+           CONTAINER SIKLUS 4: ANALISIS INSTRUMEN BOLA BASKET (LAY-UP)
+           ============================================================= -->
+      <div id="analysis-siklus-4" class="uas-analysis-container">
+        <div class="section-agency-head" style="margin-bottom: 3.5rem;">
+          <div class="badge-pill-group">
+            <span class="twin-dot-icon">
+              <span></span><span></span>
+            </span>
+            <span>ANALISIS INSTRUMEN • SIKLUS 4 (BOLA BASKET LAY-UP)</span>
+          </div>
+          <h2 class="section-agency-title">Analisis Akademik & Refleksi Kritis Asesmen Bola Basket (Lay-Up Shoot)</h2>
+          <p class="section-agency-subtitle">
+            Evaluasi ilmiah terhadap instrumen penilaian keterampilan lay-up shoot berpendekatan TaRL, analisis rantai kinematika gerak dua langkah, serta sudut pantul papan backboard di SMA N 3 Yogyakarta.
+          </p>
+        </div>
+
+        <!-- 01. Konteks dan Tujuan (Basket) -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">01</div>
+            <div>
+              <h3 class="analysis-module-title">Konteks dan Tujuan Instrumen Penilaian Bola Basket Lay-Up</h3>
+              <p class="analysis-module-desc">
+                Tinjauan koordinasi rantai kinetik gerak kompleks pada siswa SMA, pemetaan diagnostik irama footwork 2 langkah, serta dekonstruksi 5 komponen asesmen unjuk kerja.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            <div style="margin-bottom: 2.5rem;">
+              <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.65rem;">
+                <i class="fa-solid fa-basketball" style="color: #9A3412; font-size: 1.1rem;"></i>
+                A. Konteks Kinematika & Karakteristik Keterampilan Lay-Up Shoot
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; margin-bottom: 1.2rem;">
+                Lay-up shoot adalah salah satu keterampilan paling esensial sekaligus paling kompleks dalam bola basket. Gerakan ini membutuhkan sinkronisasi tingkat tinggi antara transisi dribble, langkah berirama dua ketukan (<em>two-step footwork</em>), tolakan vertikal satu kaki, dan pelepasan bola yang lembut ke sudut pantul ring:
+              </p>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid #9A3412;">
+                  <strong style="display: block; color: #9A3412; font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-shoe-prints" style="margin-right: 6px;"></i> Kesulitan Sinkronisasi Langkah (Travelling & Double Foot Take-Off)
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Siswa pemula Fase F kerap kali melakukan pelanggaran melangkah lebih dari dua kali (<em>travelling violation</em>) atau menolak menggunakan dua kaki sekaligus seperti gerakan rebound. Instrumen memuat rubrik khusus untuk memverifikasi irama langkah (Kanan-Kiri-Lompat untuk sisi kanan).
+                  </p>
+                </div>
+
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid #F59E0B;">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-vector-square" style="margin-right: 6px; color: #F59E0B;"></i> Pemahaman Sudut Pantul Kotak Backboard (Bank Shot)
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Banyak siswa menembak langsung ke jaring cincin dan gagal karena momentum laju lari yang terlalu kuat. Instrumen menilai penggunaan sudut pantul 45° pada kotak kecil papan pantul (<em>backboard target box</em>) untuk meredam kecepatan horizontal bola menjadi jatuh vertikal.
+                  </p>
+                </div>
+
+                <div style="background: #F8F9F5; border-radius: var(--radius-md); padding: 1.4rem; border-left: 4px solid var(--color-accent-lime);">
+                  <strong style="display: block; color: var(--color-primary-dark); font-size: 0.95rem; margin-bottom: 0.4rem;">
+                    <i class="fa-solid fa-layer-group" style="margin-right: 6px;"></i> Diferensiasi Tingkat Kesiapan TaRL
+                  </strong>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Instrumen menyediakan lembar asesmen diagnostik TaRL: kelompok <em>Perlu Bimbingan</em> dinilai melalui 1 langkah tanpa bola jarak dekat; kelompok <em>Berkembang</em> dinilai unjuk kerja 2 langkah dengan bola; kelompok <em>Mahir</em> dinilai unjuk kerja lay-up diawali dribble dari sisi kanan dan kiri.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dekonstruksi Asesmen Lay-Up -->
+            <div>
+              <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.65rem;">
+                <i class="fa-solid fa-diagram-project" style="color: #9A3412; font-size: 1.1rem;"></i>
+                B. Dekonstruksi 5 Komponen Unjuk Kerja Keterampilan & Formula Nilai (50:30:20)
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1.4rem;">
+                Rubrik unjuk kerja membedah rantai gerak lay-up ke dalam 5 fase biomekanis terperinci:
+              </p>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem;">
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: #9A3412; color: #FDBA74; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    BOBOT 50% • PSIKOMOTOR
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Rubrik Unjuk Kerja 5 Komponen Gerak
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Menilai 5 parameter (skala 1–4): (1) <strong>Awalan & Dribble:</strong> Ritme mendekati ring; (2) <strong>Pola Langkah:</strong> Irama 2 langkah mantap tanpa travelling; (3) <strong>Tolakan 1 Kaki:</strong> Daya angkat vertikal optimal; (4) <strong>Pelepasan Bola (Release):</strong> Sudut pantul backboard lembut dengan sentuhan jari; (5) <strong>Pendaratan Seimbang:</strong> Dua kaki mengeper terkontrol (Skor total 20).
+                  </p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: #9A3412; color: #FDBA74; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    BOBOT 30% • KOGNITIF
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Tes Uraian Fisika Gerak & Biomekanika
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Uji pemahaman tertulis 5 soal: fungsi tolakan satu kaki dalam mengonversi momentum horizontal menjadi vertikal, peran papan pantul (<em>backboard</em>) dalam meredam impuls gerak bola, regulasi travelling, biomekanika fleksi lutut saat pendaratan, serta analisis kesalahan gerak pelepasan bola.
+                  </p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: #9A3412; color: #FDBA74; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    BOBOT 20% • AFEKTIF
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Observasi Profil Pelajar Pancasila
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Memantau dimensi <strong>Mandiri</strong> (keberanian mencoba lay-up dari sisi kiri/kaki non-dominan), <strong>Gotong Royong</strong> (disiplin membantu mengambilkan bola rebound bagi rekan yang sedang dinilai), serta <strong>Sportivitas & Disiplin</strong> antrean stasiun tembak.
+                  </p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                  <div style="display: inline-block; background: #65A30D; color: #FFFFFF; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem;">
+                    FORMULA & TINDAK LANJUT
+                  </div>
+                  <h5 style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem;">
+                    Nilai Akhir & KKTP 75 (Diferensiasi TaRL)
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Formula: <strong>NA = (Ket × 50%) + (Peng × 30%) + (Sikap × 20%)</strong>. Standar KKTP 75. Siswa yang belum tuntas diberikan latihan pola langkah berpanduan garis lantai dan ring berskala bantuan; pengayaan diberikan dalam situasi game 2v1 dengan gangguan bayangan bertahan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02. Kelebihan dan Kekurangan (Basket) -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">02</div>
+            <div>
+              <h3 class="analysis-module-title">Kelebihan dan Kekurangan Instrumen Penilaian Bola Basket</h3>
+              <p class="analysis-module-desc">
+                Evaluasi mendalam terhadap ketajaman rubrik rantai kinetik, kendala rasio keterbatasan ring basket, serta solusi rekayasa pembelajaran lapangan.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            <div class="analysis-grid-2col">
+              <!-- Kelebihan -->
+              <div class="analysis-box-item pro">
+                <div class="analysis-box-title" style="color: #9A3412;">
+                  <i class="fa-solid fa-circle-check" style="color: #65A30D; font-size: 1.3rem;"></i>
+                  Kelebihan & Keunggulan Instrumen (Strengths)
+                </div>
+                <ul class="analysis-list">
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Analisis Rantai Kinematik Rinci (5 Komponen Gerak):</strong>
+                      Mampu mendeteksi sumber kegagalan gerak siswa secara presisi, membedakan apakah kesalahan berasal dari irama langkah, tolakan kaki, sudut rilis, atau keseimbangan mendarat.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Menghargai Kualitas Proses Gerak di Atas Hasil Bola Masuk:</strong>
+                      Siswa yang melakukan teknik langkah dan tolakan yang sempurna namun bolanya meleset tipis tetap memperoleh skor tinggi pada indikator biomekanika gerak.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check-circle" style="color: #65A30D;"></i>
+                    <div>
+                      <strong>Penilaian Keseimbangan Bilateral (Kanan & Kiri):</strong>
+                      Menyediakan rubrik unjuk kerja dari dua sisi sudut tembak, mendorong pemerataan koordinasi motorik tangan dan kaki non-dominan siswa SMA.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Kekurangan -->
+              <div class="analysis-box-item con">
+                <div class="analysis-box-title" style="color: #B45309;">
+                  <i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B; font-size: 1.3rem;"></i>
+                  Kelemahan & Tantangan Implementasi (Limitations)
+                </div>
+                <ul class="analysis-list">
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Keterbatasan Ring Basket Memicu Waktu Tunggu Ujian:</strong>
+                      Bila hanya tersedia 1 atau 2 ring basket di sekolah, siswa harus mengantre giliran 4 kali percobaan tembakan, berisiko menurunkan efisiensi waktu aktif pembelajaran.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Disparitas Tinggi Badan Terhadap Standar Ring 3,05 Meter:</strong>
+                      Siswa dengan postur lebih pendek dan daya ledak rendah sering kesulitan menjangkau area papan pantul, menimbulkan bias performa fisik dibandingkan penguasaan teknik murni.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-xmark" style="color: #F59E0B;"></i>
+                    <div>
+                      <strong>Kecepatan Pelepasan Bola di Udara:</strong>
+                      Momen sentuhan jari (<em>finger roll</em>) di udara berlangsung sangat cepat sehingga memerlukan posisi observasi guru yang tepat di samping bawah papan pantul.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Solusi Lapangan -->
+            <div class="analysis-box-item solution">
+              <div class="analysis-box-title" style="color: var(--color-primary-dark); font-size: 1.2rem; border-bottom: 1px solid var(--color-border-light); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+                <i class="fa-solid fa-lightbulb" style="color: var(--color-accent-lime); font-size: 1.3rem;"></i>
+                Solusi & Rekomendasi Mitigasi Lapangan (Bola Basket)
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    1. Pos Penilaian Bayangan Wall-Target Kotak Pantul Dinding
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Membuat target kotak pantul 45° di dinding lapangan untuk kelompok yang sedang mengantre giliran di ring utama. Hal ini memungkinkan siswa melatih dan dinilai irama langkahnya tanpa terhambat ketersediaan ring basket.
+                  </p>
+                </div>
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    2. Perekaman Sudut Kritis dengan Smartphone / Tablet Delay
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Memanfaatkan video delay di sudut 45° samping ring. Rekaman tayangan lambat membantu guru membuktikan apakah siswa melakukan travelling langkah atau tolakan satu kaki secara objektif di hadapan peserta didik.
+                  </p>
+                </div>
+                <div>
+                  <h5 style="color: var(--color-primary-dark); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
+                    3. Diferensiasi Jarak Garis Awalan Berdasarkan IMT & Daya Tolak
+                  </h5>
+                  <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;">
+                    Menyediakan tanda visual tapak kaki (<em>footprint markers</em>) di lantai lapangan dengan jarak yang disesuaikan untuk siswa yang memiliki jangkauan langkah pendek demi menjamin kenyamanan ritme tolakan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03. Kajian Teori (Basket) -->
+        <article class="analysis-module-card">
+          <div class="analysis-module-header">
+            <div class="analysis-module-num">03</div>
+            <div>
+              <h3 class="analysis-module-title">Kajian Teori Biomekanika Gerak & Motor Learning Bola Basket</h3>
+              <p class="analysis-module-desc">
+                Landasan ilmiah dari teori skema motorik Schmidt, transfer impuls biomekanika vertikal, dan diferensiasi pembelajaran gerak.
+              </p>
+            </div>
+          </div>
+
+          <div class="analysis-content-body">
+            <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; margin-bottom: 2rem;">
+              Perancangan instrumen penilaian Siklus 4 Lay-Up Shoot didasari oleh pilar-pilar keilmuan motorik berikut:
+            </p>
+
+            <div class="theory-grid">
+              <div class="theory-card">
+                <span class="theory-badge"><i class="fa-solid fa-microchip" style="margin-right: 5px;"></i> Kontrol Motorik</span>
+                <h4 class="theory-title">Motor Program Schema Theory (Richard A. Schmidt, 1975)</h4>
+                <p class="theory-desc">
+                  Schmidt merumuskan bahwa keterampilan kompleks diatur oleh <em>Generalized Motor Program (GMP)</em> yang memiliki parameter fleksibel (kecepatan lari, gaya tolakan). Rubrik lay-up mengobservasi pembentukan skema ingatan gerak siswa dari tahapan sadar menuju otomatisasi koordinasi mata-tangan-kaki.
+                </p>
+              </div>
+
+              <div class="theory-card">
+                <span class="theory-badge" style="background: rgba(184, 224, 35, 0.25);"><i class="fa-solid fa-atom" style="margin-right: 5px;"></i> Biomekanika Olahraga</span>
+                <h4 class="theory-title">Prinsip Rantai Kinetik & Transfer Momentum (James Hay, 1993; Knudson)</h4>
+                <p class="theory-desc">
+                  Gerakan lay up memanfaatkan transfer momentum dari percepatan horizontal lari yang diserap oleh kaki tumpu terakhir, lalu dikonversi menjadi gaya reaksi tanah vertikal (<em>Ground Reaction Force</em>) melalui dorongan sendi engkel, lutut, dan panggul secara sekuensial.
+                </p>
+              </div>
+
+              <div class="theory-card">
+                <span class="theory-badge"><i class="fa-solid fa-brain" style="margin-right: 5px;"></i> Psikologi Belajar</span>
+                <h4 class="theory-title">Feedback & Knowledge of Performance / KP (Schmidt & Lee, 2011)</h4>
+                <p class="theory-desc">
+                  Instrumen analitik memberikan <em>Knowledge of Performance (KP)</em> yang kaya mengenai kualitas pola gerak tubuh siswa. Informasi ini jauh lebih bermakna untuk koreksi teknik jangka panjang dibanding sekadar <em>Knowledge of Results (KR)</em> apakah tembakan menghasilkan poin atau tidak.
+                </p>
+              </div>
+
+              <div class="theory-card">
+                <span class="theory-badge" style="background: rgba(184, 224, 35, 0.25);"><i class="fa-solid fa-scale-balanced" style="margin-right: 5px;"></i> Kurikulum Merdeka</span>
+                <h4 class="theory-title">Differentiated Instruction & Tiered Task (Carol Ann Tomlinson, 2001)</h4>
+                <p class="theory-desc">
+                  Menyediakan tingkat kompleksitas bertingkat (lay up 1 langkah, lay up 2 langkah tanpa dribble, dan lay up penuh dengan dribble) merupakan wujud asesmen diferensiasi berkeadilan yang menghargai keberagaman tingkat kemampuan motorik awal peserta didik di sekolah mitra.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
 
     </div>
@@ -209,7 +1340,7 @@
   <!-- =================================================================
        5. AGENCY FOOTER
        ================================================================= -->
-    <footer class="footer-agency">
+  <footer class="footer-agency">
     <div class="container">
       <div class="footer-agency-grid">
         
@@ -223,7 +1354,7 @@
             </div>
           </div>
           <p class="footer-agency-bio" style="color: #94A3B8; font-size: 0.88rem; line-height: 1.7;">
-            Portofolio resmi PPL Terbimbing Program Pendidikan Profesi Guru (PPG) Calon Guru Bidang Studi Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) Universitas Negeri Yogyakarta di SMA Laboratorium UNY.
+            Portofolio resmi PPL Terbimbing Program Pendidikan Profesi Guru (PPG) Calon Guru Bidang Studi Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) Universitas Negeri Yogyakarta di SMA N 3 Yogyakarta.
           </p>
         </div>
 
@@ -234,7 +1365,7 @@
             <li><a href="../index.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Beranda Utama</a></li>
             <li><a href="../profil.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Profil Lengkap Mahasiswa</a></li>
             <li><a href="../UTS/rancangan.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Siklus 1 (UTS PPL)</a></li>
-            <li><a href="rancangan.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Siklus 2 (UAS PPL)</a></li>
+            <li><a href="rancangan.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Siklus Lanjutan (UAS PPL)</a></li>
             <li><a href="../non-mengajar.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Kegiatan Non-Mengajar</a></li>
             <li><a href="../dokumentasi.html"><i class="fa-solid fa-arrow-right" style="font-size:0.75rem; margin-right:6px;"></i> Galeri Dokumentasi</a></li>
           </ul>
@@ -244,7 +1375,7 @@
         <div class="footer-agency-col">
           <h4 class="footer-agency-col-title">Perangkat Pembelajaran</h4>
           <ul class="footer-agency-links">
-            <li><a href="rancangan.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Modul Ajar Siklus 1 & 2</a></li>
+            <li><a href="rancangan.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Modul Ajar Siklus 2, 3 & 4</a></li>
             <li><a href="media.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Media Berbasis TPACK</a></li>
             <li><a href="instrumen.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Instrumen Asesmen PJOK</a></li>
             <li><a href="video.html"><i class="fa-solid fa-check" style="color:var(--color-accent-lime); font-size:0.75rem; margin-right:6px;"></i> Video Praktik Pembelajaran</a></li>
@@ -280,8 +1411,101 @@
     </div>
   </footer>
 
+  <!-- =================================================================
+       6. INTERACTIVE SWITCHER SCRIPT (VANILLA JS)
+       ================================================================= -->
+  <script>
+    // Data definition for UAS Cycles 2, 3, 4
+    const uasCyclesData = {
+      2: {
+        title: "Instrumen Penilaian PJOK: Keterampilan Teknik Dasar Permainan Futsal",
+        sub: "Penyusun: <strong>Krisna Pratama Aulihar, S.Pd.</strong> • Siklus 2 UAS • Fase F / Kelas XI SMA • Alokasi: 2 Pertemuan (6 JP)",
+        pdfFile: "../Dokumen/Instrumen Siklus 2.pdf",
+        downloadName: "Instrumen_Penilaian_Futsal_Siklus2_KrisnaPratama.pdf",
+        fileSize: "176 KB",
+        school: "<strong>Sekolah Mitra:</strong> SMA N 3 Yogyakarta",
+        weight: "<strong>Bobot Nilai:</strong> 50% Psikomotor + 30% Kognitif + 20% Afektif",
+        kktp: "<strong>KKTP:</strong> Minimal 75 (Tuntas)",
+        approach: "<strong>Pendekatan:</strong> TaRL Station Skill Test (4 Skala)",
+        toastMsg: "Menampilkan Instrumen & Analisis Siklus 2 (Futsal)"
+      },
+      3: {
+        title: "Instrumen Penilaian PJOK: Atletik Lari Jarak Menengah (800m & 1500m)",
+        sub: "Penyusun: <strong>Krisna Pratama Aulihar, S.Pd.</strong> • Siklus 3 UAS • Fase F / Kelas XI SMA • Alokasi: 2 Pertemuan (6 JP)",
+        pdfFile: "../Dokumen/Instrumen Siklus 3.pdf",
+        downloadName: "Instrumen_Penilaian_Atletik_Siklus3_KrisnaPratama.pdf",
+        fileSize: "165 KB",
+        school: "<strong>Sekolah Mitra:</strong> SMA N 3 Yogyakarta",
+        weight: "<strong>Bobot Nilai:</strong> 50% Psikomotor + 30% Kognitif + 20% Afektif",
+        kktp: "<strong>KKTP:</strong> Minimal 75 (Tuntas)",
+        approach: "<strong>Pendekatan:</strong> Deep Learning & Monitoring Nadi (4 Skala)",
+        toastMsg: "Menampilkan Instrumen & Analisis Siklus 3 (Atletik Lari Menengah)"
+      },
+      4: {
+        title: "Instrumen Penilaian PJOK: Keterampilan Teknik Dasar Bola Basket (Lay-Up)",
+        sub: "Penyusun: <strong>Krisna Pratama Aulihar, S.Pd.</strong> • Siklus 4 UAS • Fase F / Kelas XI SMA • Alokasi: 2 Pertemuan (6 JP)",
+        pdfFile: "../Dokumen/Instrumen Siklus 4.pdf",
+        downloadName: "Instrumen_Penilaian_Basket_Siklus4_KrisnaPratama.pdf",
+        fileSize: "168 KB",
+        school: "<strong>Sekolah Mitra:</strong> SMA N 3 Yogyakarta",
+        weight: "<strong>Bobot Nilai:</strong> 50% Psikomotor + 30% Kognitif + 20% Afektif",
+        kktp: "<strong>KKTP:</strong> Minimal 75 (Tuntas)",
+        approach: "<strong>Pendekatan:</strong> TaRL Rantai Kinetik 5 Komponen (4 Skala)",
+        toastMsg: "Menampilkan Instrumen & Analisis Siklus 4 (Bola Basket Lay-Up)"
+      }
+    };
+
+    function switchUASInstrumen(cycleNum) {
+      const data = uasCyclesData[cycleNum];
+      if (!data) return;
+
+      // 1. Update Tabs
+      [2, 3, 4].forEach(n => {
+        const btn = document.getElementById('tab-btn-' + n);
+        const card = document.getElementById('sum-card-' + n);
+        const analysis = document.getElementById('analysis-siklus-' + n);
+
+        if (btn) btn.classList.toggle('active', n === cycleNum);
+        if (card) card.classList.toggle('active', n === cycleNum);
+        if (analysis) analysis.classList.toggle('active', n === cycleNum);
+      });
+
+      // 2. Update PDF Toolbar & Links
+      document.getElementById('uas-doc-title').innerHTML = data.title;
+      document.getElementById('uas-doc-sub').innerHTML = data.sub;
+
+      const dlBtn = document.getElementById('uas-doc-download');
+      dlBtn.href = data.pdfFile;
+      dlBtn.setAttribute('download', data.downloadName);
+      dlBtn.innerHTML = `<i class="fa-solid fa-file-arrow-down"></i> Unduh PDF (${data.fileSize})`;
+
+      const fsBtn = document.getElementById('uas-doc-fullscreen');
+      fsBtn.href = data.pdfFile;
+
+      // 3. Update Iframe with smooth transition
+      const iframe = document.getElementById('uas-doc-iframe');
+      iframe.style.opacity = '0.3';
+      setTimeout(() => {
+        iframe.src = data.pdfFile + '#toolbar=1&navpanes=0&scrollbar=1';
+        iframe.style.opacity = '1';
+      }, 150);
+
+      const fallback = document.getElementById('uas-doc-fallback');
+      if (fallback) fallback.href = data.pdfFile;
+
+      // 4. Update Meta Bar
+      document.getElementById('uas-meta-school').innerHTML = data.school;
+      document.getElementById('uas-meta-weight').innerHTML = data.weight;
+      document.getElementById('uas-meta-kktp').innerHTML = data.kktp;
+      document.getElementById('uas-meta-approach').innerHTML = data.approach;
+
+      // 5. Toast Feedback
+      if (typeof showToast === 'function') {
+        showToast(data.toastMsg);
+      }
+    }
+  </script>
+
   <script src="../js/main.js"></script>
 </body>
 </html>
-
-
